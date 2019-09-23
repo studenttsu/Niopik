@@ -1,0 +1,5 @@
+$(function () {
+
+    $('.hero-slider').slick();
+
+});

@@ -1,0 +1,25 @@
+
+language: node_js
+node_js:
+  - "9"
+dist: trusty
+sudo: false
+
+branches:
+  only:
+  - master
+
+install:
+  - npm install
+  - bower install
+
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local-dir: dist
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master

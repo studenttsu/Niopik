@@ -8,13 +8,17 @@
     list-style: none;
 }
 
-a {
-    transition: color $easing-time ease-out;
+html {
+    height: 100%;
 }
 
 body {
     font: 16px $futura-book;
     color: #333;
+}
+
+a {
+    transition: color $easing-time ease-out;
 }
 
 .pink {
@@ -53,11 +57,41 @@ body {
     max-width: 1230px;
 }
 
-.header {
-    margin-bottom: 46px;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__inner {
+        flex: 1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: #000000;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+        
+        &.overlay {
+            position: relative;
+            
+            &:after {
+                transition: opacity .1s ease-out;
+                transition-delay: .05s;
+                opacity: 0.6;
+                visibility: visible;
+            }
+        }    
+    }
 }
 
-.navbar{
+.navbar {
     background-color: #153c89;
     border-bottom: 1px solid #b7b7b7;
 
@@ -85,7 +119,7 @@ body {
     padding: 7px 0 10px;
     border-bottom: 1px solid #eee;
     position: relative;
-    z-index: 99991;
+    z-index: 9992;
 }
 
 .logo {
@@ -200,6 +234,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
+    outline: 0;
 
     &:before {
         content: '';
@@ -217,6 +252,10 @@ body {
         background-color: #eee;
     }
 
+    &:active {
+        background-color: darken(#eee, 3%);
+    }
+
     &__label {
         font-family: $futura; font-weight: 900;
         margin-right: 14px;
@@ -231,29 +270,6 @@ body {
     }
 }
 
-.main-content {
-    &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background: #000000;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    &.overlay {
-        position: relative;
-
-        &:after {
-            opacity: 0.6;
-            visibility: visible;
-        }
-    }    
-}
-
 .slider {
     .slick-prev,
     .slick-next {
@@ -264,7 +280,11 @@ body {
         transition: background-color $easing-time;
 
         &:hover {
-            background-color: darken(#eff3ff, 3%)
+            background-color: darken(#eff3ff, 2%)
+        }
+
+        &:active {
+            background-color: darken(#eff3ff, 3.5%)
         }
 
         &:before {
@@ -333,6 +353,10 @@ body {
             }
         }
     }
+}
+
+.hero-slider-wrap {
+    padding-top: 46px;
 }
 
 .hero-slider {
@@ -701,16 +725,19 @@ body {
 .categories {
     background-color: #f6f6f6;
     position: absolute;
-    z-index: 999;
+    z-index: 9991;
     width: 100%;
     opacity: 0;
     visibility: hidden;
+    transform: translateY(10px);
     box-shadow: 0 5px 15px 0 rgba(0,0,0,.12), 
-                0 9px 46px 0 rgba(0,0,0,.06);
-
+    0 9px 46px 0 rgba(0,0,0,.06);
+    
     &.opened {
+        transition: .1s transform ease-out;
         visibility: visible;
         opacity: 1;
+        transform: translateY(0)
     }
 
     &__list {

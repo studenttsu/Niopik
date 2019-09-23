@@ -11,9 +11,9 @@ $(function () {
         if ($(event.target).closest(".categories").length) return;
 
         $('#catalog-btn').removeClass('active')
-            .find('.hamb').toggleClass('active');
+            .find('.hamb').removeClass('active');
 
-        $('.main-content').removeClass('overlay');
+        $('.wrapper__inner').removeClass('overlay');
         $('.categories').removeClass('opened');
 
         $(document).off('click', outsideClickListener);
@@ -24,7 +24,7 @@ $(function () {
         $(this).toggleClass('active');
         $(this).find('.hamb').toggleClass('active');
 
-        $('.main-content').toggleClass('overlay');
+        $('.wrapper__inner').toggleClass('overlay');
         $('.categories').toggleClass('opened');
 
         if ($(this).hasClass('active')) {

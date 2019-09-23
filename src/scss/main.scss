@@ -2,6 +2,12 @@
 @import "vars";
 @import "../fonts/futura/stylesheet";
 
+%reset-list-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 a {
     transition: color $easing-time ease-out;
 }
@@ -78,6 +84,8 @@ body {
     background-color: #f6f6f6;
     padding: 7px 0 10px;
     border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 99991;
 }
 
 .logo {
@@ -96,20 +104,63 @@ body {
     }
 }
 
+.hamb {
+    width: 18px;
+    height: 12px;
+    box-sizing: border-box;
+
+    &__item {
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 2px;
+        transition: .3s;
+        border-radius: 10px;
+        background-color: #fff;
+        box-sizing: border-box;
+
+        &:not(:first-child) {
+            margin-top: 3px;
+        }
+    }
+
+    &.active {
+        .hamb__item {
+            &:first-of-type {
+                transform: translateY(5px) translateZ(0) rotate(45deg);
+            }
+
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+
+            &:nth-of-type(3) {
+                transform: translateY(-5px) translateZ(0) rotate(-45deg);
+            }
+        }
+    }
+}
+
 .catalog-btn {
     position: relative;
     padding-left: 60px;
-    padding-right: 30px;
+    padding-right: 20px;
+    width: 170px;
 
-    &:before {
-        content: '';
-        width: 18px;
-        height: 12px;
-        background: url('../img/icons/hamb.png') no-repeat center;
-        position: absolute;
+    &__hamb {
         left: 15px;
         top: 50%;
-        transform: translateY(-50%);
+        margin-top: -6px;
+        position: absolute;
+    }
+
+    &.active {
+        background-color: #fff;
+        color: #2254aa;
+
+        .hamb__item {
+            background-color: #2254aa;
+        }
     }
 }
 
@@ -178,6 +229,29 @@ body {
         border-radius: 50%;
         background: #ebebeb;
     }
+}
+
+.main-content {
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: #000000;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.overlay {
+        position: relative;
+
+        &:after {
+            opacity: 0.6;
+            visibility: visible;
+        }
+    }    
 }
 
 .slider {
@@ -621,6 +695,101 @@ body {
     &__title {
         font-size: 20px;
         margin: 10px 0 0;
+    }
+}
+
+.categories {
+    background-color: #f6f6f6;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.12), 
+                0 9px 46px 0 rgba(0,0,0,.06);
+
+    &.opened {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__list {
+        padding: 20px 0;
+        min-width: 220px;
+    }
+
+    &__items {
+        background-color: #ffff;
+        padding: 24px 15px 24px 80px;
+    }
+
+    .category-items {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.categories-list,
+.category-items {
+    @extend %reset-list-style;
+}
+
+.categories-list {
+    li {
+        &.active {
+            background-color: #fff;
+            
+            a {
+                font-weight: 600;
+            }
+        }
+    }
+
+    a {
+        font-size: 14px;
+        font-weight: 300;
+        color: #333333;
+        text-decoration: none;
+        display: block;
+        line-height: 1;
+        padding: 7px 14px;
+        outline: 0;
+    }
+}
+
+.category-items {
+    li {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: '';
+            width: 5px;
+            height: 9px;
+            display: inline-block;
+            margin-right: 12px;
+            background: url('../img/icons/arrow-pink.png') no-repeat center;
+        }
+    }
+
+    a {
+        font-size: 14px;
+        font-weight: 300;
+        color: #333333;
+        line-height: 1;
+        padding: 4px 0;
+        text-decoration: none;
+        outline: 0;
+        display: block;
+        flex: 1;
+
+        &:hover {
+            font-weight: 600;
+        }
     }
 }
 

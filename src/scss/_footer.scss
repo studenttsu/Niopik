@@ -1,0 +1,229 @@
+.footer {
+    border-top: 1px solid #ccc;
+    padding-top: 45px;
+    padding-bottom: 25px;
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        .footer-nav--others {
+            flex: 1;
+            max-width: 320px;
+
+            ul {
+                column-count: 2;
+            }
+        }
+    }
+
+    &__partners {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .footer-partner {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__contacts {
+        margin-bottom: 25px;
+    }
+}
+
+.footer-nav {
+    &__title {
+        font-size: 18px;
+        font-family: $futura;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        @extend %reset-list-style;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 6px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #333333;
+
+        &:hover {
+            color: #265fbf;
+        }
+    }
+}
+
+.footer-privacy {
+    font-size: 14px;
+    color: #818181;
+
+    &__item {
+        border-top: 1px solid #ccc;
+        padding: 20px 0;
+    }
+}
+
+.footer-contacts {
+    background-color: #f5f5f5;
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 35px;
+    }
+
+    strong {
+        font-family: $futura;
+        font-weight: 900;
+    }
+
+    a {
+        color: #333333;
+        text-decoration: none;
+    }
+}
+
+.footer-partner {
+    text-align: center;
+
+    span {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 13px;
+    }
+
+    a {
+        display: block;
+    }
+}
+
+.footer-info {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__company {
+        margin-right: 50px;
+    }
+
+    &__about {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 12px;
+        color: #818181;
+    }
+}
+
+.policy-links {
+    a {
+        display: block;
+        color: #818181;
+        text-decoration: none;
+
+        &:hover {
+            color: #265fbf; 
+        }
+    }
+}
+
+.social-icons {
+    font-size: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    
+    &__link {
+        margin: 0 6px;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        padding: 0 5px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+        border-radius: 50%;
+        background: #e1e1e1;
+        margin-left: 10px;
+        transition: all .3s;
+        overflow: hidden;
+
+        &--ok:hover {
+            background: #f07225;
+        }
+
+        &--vk:hover {
+            background: #4781a9;
+        }
+
+        &--fb:hover {
+            background: #3a5892;
+        }
+
+        &--instagram {
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 1;
+                background-image: radial-gradient(circle at 27% 108%,#fd5,#fd5 10%,#ff543e 50%,#c837ab);
+            }
+
+            &:after {
+                background: #e1e1e1;
+                transition: opacity .3s;
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 1;
+            }
+
+            &:hover:after {
+                opacity: 0;
+                transition: opacity .3s;
+            }
+
+            .svg-icon {
+                z-index: 1;
+                position: relative;
+            }
+        }
+    }
+
+    .svg-icon {
+        width: 1.2em;
+        height: 1.2em;
+        display: inline-block;
+        vertical-align: top;
+        transform: translateX(0);
+        backface-visibility: hidden;
+        position: relative;
+        fill: #fff;
+    }
+}
+

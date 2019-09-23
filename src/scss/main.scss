@@ -18,7 +18,17 @@ body {
 }
 
 a {
+    color: #265fbf;
+    text-decoration: none;
     transition: color $easing-time ease-out;
+
+    &:hover {
+        color: darken(#265fbf, 5%)
+    }
+
+    &:active {
+        color: darken(#265fbf, 8%)
+    }
 }
 
 .pink {
@@ -45,11 +55,13 @@ a {
     }
 
     &:hover {
-        background: darken(#265fbf, 5%)
+        background: darken(#265fbf, 5%);
+        color: #fff;
     }
 
     &:active {
-        background: darken(#265fbf, 8%)
+        background: darken(#265fbf, 8%);
+        color: #fff;
     }
 }
 
@@ -91,184 +103,7 @@ a {
     }
 }
 
-.navbar {
-    background-color: #153c89;
-    border-bottom: 1px solid #b7b7b7;
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    a {
-        color: #fff;
-        text-decoration: none;
-        font: 300 14px $futura;
-        padding: 11px 2px;
-        
-        &:hover {
-            color: hsla(0,0%,100%,.8);
-        }
-    }
-}
-
-.main-top {
-    background-color: #f6f6f6;
-    padding: 7px 0 10px;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    z-index: 9992;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-
-    img {
-        width: 74px;
-        height: 101px;
-        margin-right: 22px;
-    }
-
-    span {
-        color: #265fbf;
-        font: 14px $futura-book;
-    }
-}
-
-.hamb {
-    width: 18px;
-    height: 12px;
-    box-sizing: border-box;
-
-    &__item {
-        position: relative;
-        display: block;
-        width: 18px;
-        height: 2px;
-        transition: .3s;
-        border-radius: 10px;
-        background-color: #fff;
-        box-sizing: border-box;
-
-        &:not(:first-child) {
-            margin-top: 3px;
-        }
-    }
-
-    &.active {
-        .hamb__item {
-            &:first-of-type {
-                transform: translateY(5px) translateZ(0) rotate(45deg);
-            }
-
-            &:nth-of-type(2) {
-                opacity: 0;
-            }
-
-            &:nth-of-type(3) {
-                transform: translateY(-5px) translateZ(0) rotate(-45deg);
-            }
-        }
-    }
-}
-
-.catalog-btn {
-    position: relative;
-    padding-left: 60px;
-    padding-right: 20px;
-    width: 170px;
-
-    &__hamb {
-        left: 15px;
-        top: 50%;
-        margin-top: -6px;
-        position: absolute;
-    }
-
-    &.active {
-        background-color: #fff;
-        color: #2254aa;
-
-        .hamb__item {
-            background-color: #2254aa;
-        }
-    }
-}
-
-.phone {
-    a {
-        color: #333;
-        font-family: $futura; font-weight: 900;
-        font-size: 18px;
-        text-decoration: none;
-    }
-
-    &__descr {
-        display: block;
-        font-family: $futura-book;
-        color: #666;
-    }
-}
-
-.order-phone {
-    color: #d541b6;
-    font-weight: bold;
-    outline: 0;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-.basket-btn {
-    transition: background $easing-time ease-in-out;
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: $border-radius;
-    height: 40px;
-    padding: 7px 14px 7px 45px;
-    cursor: pointer;
-    color: #a6a6a6;
-    display: flex;
-    align-items: center;
-    position: relative;
-    outline: 0;
-
-    &:before {
-        content: '';
-        position: absolute;
-        width: 19px;
-        height: 18px;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: url('../img/icons/basket.png') no-repeat center;
-    }
-
-    &:hover {
-        color: #5b5b5b;
-        background-color: #eee;
-    }
-
-    &:active {
-        background-color: darken(#eee, 3%);
-    }
-
-    &__label {
-        font-family: $futura; font-weight: 900;
-        margin-right: 14px;
-    }
-
-    &__count {
-        font-size: 14px;
-        height: 24px;
-        line-height: 24px;
-        border-radius: 50%;
-        background: #ebebeb;
-    }
-}
+@import "header";
 
 .slider {
     .slick-prev,
@@ -416,6 +251,10 @@ a {
         transition: opacity .3s;
         opacity: 0;
         background: #fff;
+    }
+
+    &:hover {
+        color: #ffffff;
     }
 
     &:hover:after {
@@ -569,6 +408,10 @@ a {
     }
 }
 
+.info-blocks {
+    padding-bottom: 100px;
+}
+
 .info-item {
     text-align: center;
     display: flex;
@@ -720,6 +563,28 @@ a {
         font-size: 20px;
         margin: 10px 0 0;
     }
+
+    &__text {
+        p {
+            line-height: 1.3;
+        }
+    }
+
+    &__link {
+        font-weight: 900;
+        font-family: $futura;
+
+        &:before {
+            width: 7px;
+            height: 11px;
+            margin-right: 9px;
+            position: relative;
+            top: -2px;
+            content: '';
+            display: inline-block;
+            background: url('../img/icons/arrow-blue.png') no-repeat center;
+        }
+    }
 }
 
 .categories {
@@ -820,4 +685,5 @@ a {
     }
 }
 
+@import "footer";
 @import "media";

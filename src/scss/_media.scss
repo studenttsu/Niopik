@@ -15,7 +15,7 @@
         }
     
         &__logo {
-            margin-right: 10px;
+            margin-right: 30px;
         }
 
         .phone {
@@ -336,10 +336,32 @@
             margin-bottom: 15px;
         }
     }
+
+    .mobile-menu {
+        top: 98px;
+        height: calc(100vh - 88px);
+
+        &.opened {
+            top: 88px;
+        }
+    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+    .main-top {
+        height: 70px;
+    }
+
+    .mobile-menu {
+        top: 80px;
+        height: calc(100vh - 70px);
+
+        &.opened {
+            top: 70px;
+        }
+    }
+
     .logo {
         img {
             width: 40px;

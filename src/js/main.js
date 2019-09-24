@@ -23,9 +23,17 @@ $(function () {
         ]
     });
 
-    $('.header__navbar .hamb').on('click', function () {
+    $('#mobile-hamb').on('click', function () {
         $(this).toggleClass('active');
-    })
+        $('#mobile-menu').toggleClass('opened');
+        $('.header').toggleClass('fixed');
+        $('body').toggleClass('hide-scroll');
+    });
+
+    $('#mobile-menu .drop').on('click', function() {
+        $(this).toggleClass('active');
+        $(this).find('.mobile-menu__sub-nav').slideToggle();
+    });
 
     var outsideClickListener = function (event) {
         if ($(event.target).closest(".categories").length) return;

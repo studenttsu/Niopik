@@ -1,12 +1,5 @@
 
 .header {
-    &.fixed {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 999;
-    }
-
     &__navbar {
         background-color: #153c89;
         border-bottom: 1px solid #b7b7b7;

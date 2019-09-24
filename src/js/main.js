@@ -1,5 +1,9 @@
 $(function () {
 
+    $().fancybox({
+        selector: '.docs-slider .slick-slide:not(.slick-cloned) .doc-img'
+    });
+
     $('.hero-slider').slick({ dots: true });
 
     $('.docs-slider').slick({
@@ -26,11 +30,10 @@ $(function () {
     $('#mobile-hamb').on('click', function () {
         $(this).toggleClass('active');
         $('#mobile-menu').toggleClass('opened');
-        $('.header').toggleClass('fixed');
         $('body').toggleClass('hide-scroll');
     });
 
-    $('#mobile-menu .drop').on('click', function() {
+    $('#mobile-menu .drop').on('click', function () {
         $(this).toggleClass('active');
         $(this).find('.mobile-menu__sub-nav').slideToggle();
     });

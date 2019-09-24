@@ -6,7 +6,259 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-   
+    .navbar {
+        justify-content: center;
+
+        a {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+
+    .goods-section {
+        &__name {
+            font-size: 26px;
+        }
+    }
+
+    .features {
+        padding: 0;
+    }
+
+    .hero-slide {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: initial;
+        padding-bottom: 30px;
+
+        &__text {
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        &__img {
+            position: static;
+            transform: none;
+            max-height: 200px;
+            width: auto;
+            text-align: center;
+            display: block;
+
+            img {
+                display: block;
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+    
+    .helper-banner {
+        height: 360px;
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+        }
+
+        .container {            
+            > div {
+                padding-top: 80px;
+            }
+        }
+
+        .btn {
+            top: 240px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        &__navbar {
+            .hamb {
+                display: inline-block;
+            }
+        }
+    }
+
+    .hero-slider-wrap {
+        .container {
+            padding: 0;
+        }
+    }
+
+    .hero-slider {
+        .slick-next {
+            right: 10px;
+        }
+        
+        .slick-prev {
+            left: 10px;
+        }
+    }
+
+    .slider {
+        .slick-next,
+        .slick-prev {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .about-section__txt {
+        text-align: center;
+    }
+
+    .helper-banner {
+        height: initial;
+        padding: 30px 15px;
+        text-align: center;
+
+        .container {            
+            > div {
+                flex-direction: column;
+                justify-content: center;
+                padding: 0;
+            }
+        }
+
+        &__descr {
+            margin-bottom: 30px;
+        }
+
+        &__img {
+            text-align: center;
+            margin: auto;
+            width: 100%;
+            max-width: 380px;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+        
+        &__subtitle {
+            font-size: 22px;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 380px;
+            position: static;
+        }
+    }
+
+    .goods-section {
+        height: initial;
+        padding: 30px 10px;
+
+        &__img {
+            min-width: 60px;
+            flex: 20%;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        &__name {
+            font-size: 24px;
+            flex: 1;
+        }
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .section {
+        &__title {
+            h2 {
+                font-size: 28px;
+            }
+        }
+    }
+
+    .hero-slide {
+        padding: 30px;
+        &__text {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .features {
+        padding: 0;
+        justify-content: center;
+
+        .feature-item {
+            flex: initial;
+
+            &__icon {
+                width: 65px;
+                height: 65px;
+            }
+        }
+    }
+
+    .footer {
+        &__nav {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__partners {
+            align-items: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+    }
+
+    .footer-nav {
+        &__title {
+            margin-bottom: 12px;
+        }
+    }
+
+    .footer-privacy {
+        text-align: center;
+    }
+
+    .footer-contacts {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 600px;
+
+            > div:first-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .footer-info {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__about {
+            margin-bottom: 25px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__company {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
 }
 
 /* Extra Small Devices, Phones */

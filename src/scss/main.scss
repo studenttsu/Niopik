@@ -15,6 +15,7 @@ html {
 body {
     font: 16px $futura-book;
     color: #333;
+    min-width: 320px;
 }
 
 a {
@@ -267,6 +268,8 @@ a {
 
     &__text {
         max-width: 570px;
+        position: relative;
+        z-index: 1;
     }
 
     &__img {
@@ -308,6 +311,14 @@ a {
     }
 }
 
+.goods-section-wrap {
+    margin-top: -25px;
+
+    > div {
+        margin-top: 25px;
+    }
+}
+
 .goods-section {
     background-color: #f6f6f6;
     padding: 35px;
@@ -338,12 +349,14 @@ a {
     }
 
     &__img {
-        width: 250px;
+        max-width: 250px;
         display: flex;
+        margin-right: 20px;
+        min-width: 100px;
 
         img {
             max-height: 230px;
-            width: auto;
+            width: 100%;
         }
     }
 
@@ -362,6 +375,7 @@ a {
     .feature-item {
         flex: 50%;
         margin-top: 30px;
+        padding-right: 30px;
 
         &__descr {
             max-width: 330px;
@@ -412,6 +426,14 @@ a {
     padding-bottom: 100px;
 }
 
+.info-items-wrap {
+    margin-top: -40px;
+
+    > div {
+        margin-top: 40px;
+    }
+}
+
 .info-item {
     text-align: center;
     display: flex;
@@ -430,6 +452,11 @@ a {
         margin-bottom: 20px;
         flex: 1;
     }
+
+    .btn {
+        max-width: 320px;
+        margin: auto;
+    }
 }
 
 .docs-slider {
@@ -446,6 +473,8 @@ a {
         }
 
         img {
+            width: 100%;
+            height: auto;
             margin: auto;
             box-shadow: 0 10px 10px rgba(0,0,0,0.25);
         }
@@ -461,10 +490,16 @@ a {
     background-color: #e5ecfe;
 
     .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         height: 100%;
+        position: relative;
+        
+        > div {
+            display: flex;
+            align-items: flex-start;
+            padding-top: 100px;
+            justify-content: space-between;
+            height: 100%;
+        }
     }
 
     &__title,
@@ -475,22 +510,34 @@ a {
 
     &__title {
         font-size: 36px;
+        line-height: 1.1;
+        margin-bottom: 18px;
     }
 
     &__subtitle {
         font-size: 30px;
-        margin-bottom: 60px;
+        // margin-bottom: 60px;
         color: #d64ab8;
+    }
+
+    &__img {
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     .btn {
         max-width: 200px;
         width: 100%;
+        position: absolute;
+        top: 300px;
     }
 }
 
 .about-section {
     padding-top: 75px;
+    overflow: hidden;
 
     &:before {
         content: '';
@@ -506,6 +553,7 @@ a {
         height: 430px;
         position: relative;
         float: right;
+        margin-bottom: 40px;
 
         &:before {
             content: '';

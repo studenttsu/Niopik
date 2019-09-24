@@ -1,11 +1,34 @@
 @import "vars";
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
+    .logo {
+        span {
+            display: none;
+        }
+    }
+    
+    .main-top {
+        &__left {
+            flex: initial;
+            max-width: initial;
+        }
+    
+        &__logo {
+            margin-right: 10px;
+        }
+
+        .phone {
+            &__descr {
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+
     .navbar {
         justify-content: center;
 
@@ -80,9 +103,59 @@
 @media only screen and (max-width: 768px) {
     .header {
         &__navbar {
-            .hamb {
-                display: inline-block;
-            }
+            display: none;
+        }
+    }
+
+    .main-top {
+        height: 88px;
+
+        &__hamb {
+            display: inline-block;
+        }
+
+        &__logo {
+            margin-right: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .container {
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .catalog-btn,
+        .order-phone,
+        .phone {
+            display: none;
+        }
+
+        &__left {
+            margin-right: 0;
+        }
+
+        &__right {
+            max-width: initial;
+            justify-content: flex-end;
+        }
+    }
+
+    .basket-btn {
+        background: transparent;
+        border: none;
+        width: initial;
+        padding-right: 0;
+
+        &__label {
+            display: none;
+        }
+    }
+
+    .logo {
+        span {
+            display: inline-block;
         }
     }
 
@@ -182,6 +255,10 @@
         }
     }
 
+    .hero-slider-wrap {
+        margin-top: 0;
+    }
+
     .hero-slide {
         padding: 30px;
         &__text {
@@ -262,8 +339,21 @@
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width: 500px) {
-   
+@media only screen and (max-width: 480px) {
+    .logo {
+        img {
+            width: 40px;
+        }
+
+        span {
+            line-height: 1.2;
+            font-size: 12px;
+        }
+
+        img + span {
+            margin-left: 15px;
+        }
+    }
 }
 
 /* Custom, iPhone Retina */

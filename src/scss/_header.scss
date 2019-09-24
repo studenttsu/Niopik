@@ -37,21 +37,69 @@
     border-bottom: 1px solid #eee;
     position: relative;
     z-index: 9992;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__hamb {
+        display: none;
+
+        .hamb__item {
+            background-color: #265fbf;
+        }
+    }
+
+    &__left,
+    &__right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        max-width: 470px;
+        margin-right: 30px;
+    }
+
+    &__right {
+        max-width: 600px;
+        flex-shrink: 0;
+
+        .order-phone {
+            margin: 0 10px;
+        }
+    }
+
+    &__logo {
+        max-width: 270px;
+    }
 }
 
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    outline: 0;
 
     img {
-        width: 74px;
-        height: 101px;
-        margin-right: 22px;
+        width: 51px;
+        height: auto;
+        display: block;
     }
 
     span {
+        display: inline-block;
         color: #265fbf;
         font: 14px $futura-book;
+    }
+
+    img + span {
+        margin-left: 22px;
     }
 }
 
@@ -59,6 +107,11 @@
     width: 18px;
     height: 12px;
     box-sizing: border-box;
+    display: block;
+    background: transparent;
+    border: none;
+    padding: 0;
+    outline: 0;
 
     &__item {
         position: relative;
@@ -118,14 +171,13 @@
 .phone {
     a {
         color: #333;
-        font-family: $futura; font-weight: 900;
-        font-size: 18px;
+        font: 900 18px $futura;
         text-decoration: none;
+        white-space: nowrap;
     }
 
     &__descr {
         display: block;
-        font-family: $futura-book;
         color: #666;
     }
 }

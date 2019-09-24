@@ -192,10 +192,18 @@ a {
 }
 
 .hero-slider-wrap {
-    padding-top: 46px;
+    margin-top: 46px;
 }
 
 .hero-slider {
+    max-height: 377px;
+    overflow: hidden;
+
+    &.slick-initialized {
+        overflow: initial;
+        max-height: initial;
+    }
+
     .slick-prev,
     .slick-next {
         background-color: rgba(#fff, .24);

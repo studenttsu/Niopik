@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -4655,463 +4654,213 @@ html {
   }
 }
 
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-.slick-list:focus {
-  outline: none;
-}
-
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.slick-track:before, .slick-track:after {
-  content: "";
-  display: table;
-}
-
-.slick-track:after {
-  clear: both;
-}
-
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  display: none;
-}
-
-[dir="rtl"] .slick-slide {
-  float: right;
-}
-
-.slick-slide img {
-  display: block;
-}
-
-.slick-slide.slick-loading img {
-  display: none;
-}
-
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-
-.slick-initialized .slick-slide {
-  display: block;
-}
-
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-
-.slick-arrow.slick-hidden {
-  display: none;
-}
-
-/* Slider */
-.slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat;
-}
-
-/* Icons */
 @font-face {
-  font-family: "slick";
-  src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-family: 'Futura PT';
+  src: url("../fonts/futura/FuturaPT-BoldObl.eot");
+  src: url("../fonts/futura/FuturaPT-BoldObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-BoldObl.woff2") format("woff2"), url("../fonts/futura/FuturaPT-BoldObl.woff") format("woff"), url("../fonts/futura/FuturaPT-BoldObl.ttf") format("truetype"), url("../fonts/futura/FuturaPT-BoldObl.svg#FuturaPT-BoldObl") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT Extra';
+  src: url("../fonts/futura/FuturaPT-ExtraBoldObl.eot");
+  src: url("../fonts/futura/FuturaPT-ExtraBoldObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-ExtraBoldObl.woff2") format("woff2"), url("../fonts/futura/FuturaPT-ExtraBoldObl.woff") format("woff"), url("../fonts/futura/FuturaPT-ExtraBoldObl.ttf") format("truetype"), url("../fonts/futura/FuturaPT-ExtraBoldObl.svg#FuturaPT-ExtraBoldObl") format("svg");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url("../fonts/futura/FuturaPT-Book.eot");
+  src: url("../fonts/futura/FuturaPT-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-Book.woff2") format("woff2"), url("../fonts/futura/FuturaPT-Book.woff") format("woff"), url("../fonts/futura/FuturaPT-Book.ttf") format("truetype"), url("../fonts/futura/FuturaPT-Book.svg#FuturaPT-Book") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-/* Arrows */
-.slick-prev,
-.slick-next {
-  position: absolute;
-  display: block;
-  height: 20px;
-  width: 20px;
-  line-height: 0px;
-  font-size: 0px;
-  cursor: pointer;
-  background: transparent;
-  color: transparent;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+@font-face {
+  font-family: 'Futura PT';
+  src: url("../fonts/futura/FuturaPT-HeavyObl.eot");
+  src: url("../fonts/futura/FuturaPT-HeavyObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-HeavyObl.woff2") format("woff2"), url("../fonts/futura/FuturaPT-HeavyObl.woff") format("woff"), url("../fonts/futura/FuturaPT-HeavyObl.ttf") format("truetype"), url("../fonts/futura/FuturaPT-HeavyObl.svg#FuturaPT-HeavyObl") format("svg");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url("../fonts/futura/FuturaPT-Medium.eot");
+  src: url("../fonts/futura/FuturaPT-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-Medium.woff2") format("woff2"), url("../fonts/futura/FuturaPT-Medium.woff") format("woff"), url("../fonts/futura/FuturaPT-Medium.ttf") format("truetype"), url("../fonts/futura/FuturaPT-Medium.svg#FuturaPT-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT Cond Extra';
+  src: url("../fonts/futura/FuturaPTCond-ExtraBoldObl.eot");
+  src: url("../fonts/futura/FuturaPTCond-ExtraBoldObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPTCond-ExtraBoldObl.woff2") format("woff2"), url("../fonts/futura/FuturaPTCond-ExtraBoldObl.woff") format("woff"), url("../fonts/futura/FuturaPTCond-ExtraBoldObl.ttf") format("truetype"), url("../fonts/futura/FuturaPTCond-ExtraBoldObl.svg#FuturaPTCond-ExtraBoldObl") format("svg");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url("../fonts/futura/FuturaPT-BookObl.eot");
+  src: url("../fonts/futura/FuturaPT-BookObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-BookObl.woff2") format("woff2"), url("../fonts/futura/FuturaPT-BookObl.woff") format("woff"), url("../fonts/futura/FuturaPT-BookObl.ttf") format("truetype"), url("../fonts/futura/FuturaPT-BookObl.svg#FuturaPT-BookObl") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT Cond';
+  src: url("../fonts/futura/FuturaPTCond-Medium.eot");
+  src: url("../fonts/futura/FuturaPTCond-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPTCond-Medium.woff2") format("woff2"), url("../fonts/futura/FuturaPTCond-Medium.woff") format("woff"), url("../fonts/futura/FuturaPTCond-Medium.ttf") format("truetype"), url("../fonts/futura/FuturaPTCond-Medium.svg#FuturaPTCond-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url("../fonts/futura/FuturaPT-MediumObl.eot");
+  src: url("../fonts/futura/FuturaPT-MediumObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-MediumObl.woff2") format("woff2"), url("../fonts/futura/FuturaPT-MediumObl.woff") format("woff"), url("../fonts/futura/FuturaPT-MediumObl.ttf") format("truetype"), url("../fonts/futura/FuturaPT-MediumObl.svg#FuturaPT-MediumObl") format("svg");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url("../fonts/futura/FuturaPT-Bold.eot");
+  src: url("../fonts/futura/FuturaPT-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-Bold.woff2") format("woff2"), url("../fonts/futura/FuturaPT-Bold.woff") format("woff"), url("../fonts/futura/FuturaPT-Bold.ttf") format("truetype"), url("../fonts/futura/FuturaPT-Bold.svg#FuturaPT-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT Demi';
+  src: url("../fonts/futura/FuturaPT-Demi.eot");
+  src: url("../fonts/futura/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-Demi.woff2") format("woff2"), url("../fonts/futura/FuturaPT-Demi.woff") format("woff"), url("../fonts/futura/FuturaPT-Demi.ttf") format("truetype"), url("../fonts/futura/FuturaPT-Demi.svg#FuturaPT-Demi") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT Extra';
+  src: url("../fonts/futura/FuturaPT-ExtraBold.eot");
+  src: url("../fonts/futura/FuturaPT-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-ExtraBold.woff2") format("woff2"), url("../fonts/futura/FuturaPT-ExtraBold.woff") format("woff"), url("../fonts/futura/FuturaPT-ExtraBold.ttf") format("truetype"), url("../fonts/futura/FuturaPT-ExtraBold.svg#FuturaPT-ExtraBold") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT Cond Extra';
+  src: url("../fonts/futura/FuturaPTCond-ExtraBold.eot");
+  src: url("../fonts/futura/FuturaPTCond-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPTCond-ExtraBold.woff2") format("woff2"), url("../fonts/futura/FuturaPTCond-ExtraBold.woff") format("woff"), url("../fonts/futura/FuturaPTCond-ExtraBold.ttf") format("truetype"), url("../fonts/futura/FuturaPTCond-ExtraBold.svg#FuturaPTCond-ExtraBold") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT Cond';
+  src: url("../fonts/futura/FuturaPTCond-BoldObl.eot");
+  src: url("../fonts/futura/FuturaPTCond-BoldObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPTCond-BoldObl.woff2") format("woff2"), url("../fonts/futura/FuturaPTCond-BoldObl.woff") format("woff"), url("../fonts/futura/FuturaPTCond-BoldObl.ttf") format("truetype"), url("../fonts/futura/FuturaPTCond-BoldObl.svg#FuturaPTCond-BoldObl") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT Cond';
+  src: url("../fonts/futura/FuturaPTCond-Bold.eot");
+  src: url("../fonts/futura/FuturaPTCond-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPTCond-Bold.woff2") format("woff2"), url("../fonts/futura/FuturaPTCond-Bold.woff") format("woff"), url("../fonts/futura/FuturaPTCond-Bold.ttf") format("truetype"), url("../fonts/futura/FuturaPTCond-Bold.svg#FuturaPTCond-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT Cond';
+  src: url("../fonts/futura/FuturaPTCond-MediumObl.eot");
+  src: url("../fonts/futura/FuturaPTCond-MediumObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPTCond-MediumObl.woff2") format("woff2"), url("../fonts/futura/FuturaPTCond-MediumObl.woff") format("woff"), url("../fonts/futura/FuturaPTCond-MediumObl.ttf") format("truetype"), url("../fonts/futura/FuturaPTCond-MediumObl.svg#FuturaPTCond-MediumObl") format("svg");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT Demi';
+  src: url("../fonts/futura/FuturaPT-DemiObl.eot");
+  src: url("../fonts/futura/FuturaPT-DemiObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-DemiObl.woff2") format("woff2"), url("../fonts/futura/FuturaPT-DemiObl.woff") format("woff"), url("../fonts/futura/FuturaPT-DemiObl.ttf") format("truetype"), url("../fonts/futura/FuturaPT-DemiObl.svg#FuturaPT-DemiObl") format("svg");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT Cond Book';
+  src: url("../fonts/futura/FuturaPTCond-BookObl.eot");
+  src: url("../fonts/futura/FuturaPTCond-BookObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPTCond-BookObl.woff2") format("woff2"), url("../fonts/futura/FuturaPTCond-BookObl.woff") format("woff"), url("../fonts/futura/FuturaPTCond-BookObl.ttf") format("truetype"), url("../fonts/futura/FuturaPTCond-BookObl.svg#FuturaPTCond-BookObl") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url("../fonts/futura/FuturaPT-LightObl.eot");
+  src: url("../fonts/futura/FuturaPT-LightObl.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-LightObl.woff2") format("woff2"), url("../fonts/futura/FuturaPT-LightObl.woff") format("woff"), url("../fonts/futura/FuturaPT-LightObl.ttf") format("truetype"), url("../fonts/futura/FuturaPT-LightObl.svg#FuturaPT-LightObl") format("svg");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura PT Cond Book';
+  src: url("../fonts/futura/FuturaPTCond-Book.eot");
+  src: url("../fonts/futura/FuturaPTCond-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPTCond-Book.woff2") format("woff2"), url("../fonts/futura/FuturaPTCond-Book.woff") format("woff"), url("../fonts/futura/FuturaPTCond-Book.ttf") format("truetype"), url("../fonts/futura/FuturaPTCond-Book.svg#FuturaPTCond-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url("../fonts/futura/FuturaPT-Heavy.eot");
+  src: url("../fonts/futura/FuturaPT-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-Heavy.woff2") format("woff2"), url("../fonts/futura/FuturaPT-Heavy.woff") format("woff"), url("../fonts/futura/FuturaPT-Heavy.ttf") format("truetype"), url("../fonts/futura/FuturaPT-Heavy.svg#FuturaPT-Heavy") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url("../fonts/futura/FuturaPT-Light.eot");
+  src: url("../fonts/futura/FuturaPT-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaPT-Light.woff2") format("woff2"), url("../fonts/futura/FuturaPT-Light.woff") format("woff"), url("../fonts/futura/FuturaPT-Light.ttf") format("truetype"), url("../fonts/futura/FuturaPT-Light.svg#FuturaPT-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.categories-list,
+.category-items, .footer-nav ul {
+  margin: 0;
   padding: 0;
-  border: none;
-  outline: none;
-}
-
-.slick-prev:hover, .slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
-  outline: none;
-  background: transparent;
-  color: transparent;
-}
-
-.slick-prev:hover:before, .slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before {
-  opacity: 1;
-}
-
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
-  opacity: 0.25;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-  color: white;
-  opacity: 0.75;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-  left: -25px;
-}
-
-[dir="rtl"] .slick-prev {
-  left: auto;
-  right: -25px;
-}
-
-.slick-prev:before {
-  content: "←";
-}
-
-[dir="rtl"] .slick-prev:before {
-  content: "→";
-}
-
-.slick-next {
-  right: -25px;
-}
-
-[dir="rtl"] .slick-next {
-  left: -25px;
-  right: auto;
-}
-
-.slick-next:before {
-  content: "→";
-}
-
-[dir="rtl"] .slick-next:before {
-  content: "←";
-}
-
-/* Dots */
-.slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
-
-.slick-dots {
-  position: absolute;
-  bottom: -25px;
   list-style: none;
-  display: block;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  width: 100%;
 }
 
-.slick-dots li {
-  position: relative;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  margin: 0 5px;
-  padding: 0;
-  cursor: pointer;
-}
-
-.slick-dots li button {
-  border: 0;
-  background: transparent;
-  display: block;
-  height: 20px;
-  width: 20px;
-  outline: none;
-  line-height: 0px;
-  font-size: 0px;
-  color: transparent;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.slick-dots li button:hover, .slick-dots li button:focus {
-  outline: none;
-}
-
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
-  opacity: 1;
-}
-
-.slick-dots li button:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "•";
-  width: 20px;
-  height: 20px;
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
-  text-align: center;
-  color: black;
-  opacity: 0.25;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-dots li.slick-active button:before {
-  color: black;
-  opacity: 0.75;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("../fonts/FuturaPT-BoldObl.eot");
-  src: url("../fonts/FuturaPT-BoldObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-BoldObl.woff2") format("woff2"), url("../fonts/FuturaPT-BoldObl.woff") format("woff"), url("../fonts/FuturaPT-BoldObl.ttf") format("truetype"), url("../fonts/FuturaPT-BoldObl.svg#FuturaPT-BoldObl") format("svg");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT Extra';
-  src: url("../fonts/FuturaPT-ExtraBoldObl.eot");
-  src: url("../fonts/FuturaPT-ExtraBoldObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-ExtraBoldObl.woff2") format("woff2"), url("../fonts/FuturaPT-ExtraBoldObl.woff") format("woff"), url("../fonts/FuturaPT-ExtraBoldObl.ttf") format("truetype"), url("../fonts/FuturaPT-ExtraBoldObl.svg#FuturaPT-ExtraBoldObl") format("svg");
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT Book';
-  src: url("../fonts/FuturaPT-Book.eot");
-  src: url("../fonts/FuturaPT-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Book.woff2") format("woff2"), url("../fonts/FuturaPT-Book.woff") format("woff"), url("../fonts/FuturaPT-Book.ttf") format("truetype"), url("../fonts/FuturaPT-Book.svg#FuturaPT-Book") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("../fonts/FuturaPT-HeavyObl.eot");
-  src: url("../fonts/FuturaPT-HeavyObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-HeavyObl.woff2") format("woff2"), url("../fonts/FuturaPT-HeavyObl.woff") format("woff"), url("../fonts/FuturaPT-HeavyObl.ttf") format("truetype"), url("../fonts/FuturaPT-HeavyObl.svg#FuturaPT-HeavyObl") format("svg");
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("../fonts/FuturaPT-Medium.eot");
-  src: url("../fonts/FuturaPT-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Medium.woff2") format("woff2"), url("../fonts/FuturaPT-Medium.woff") format("woff"), url("../fonts/FuturaPT-Medium.ttf") format("truetype"), url("../fonts/FuturaPT-Medium.svg#FuturaPT-Medium") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT Cond Extra';
-  src: url("../fonts/FuturaPTCond-ExtraBoldObl.eot");
-  src: url("../fonts/FuturaPTCond-ExtraBoldObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-ExtraBoldObl.woff2") format("woff2"), url("../fonts/FuturaPTCond-ExtraBoldObl.woff") format("woff"), url("../fonts/FuturaPTCond-ExtraBoldObl.ttf") format("truetype"), url("../fonts/FuturaPTCond-ExtraBoldObl.svg#FuturaPTCond-ExtraBoldObl") format("svg");
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT Book';
-  src: url("../fonts/FuturaPT-BookObl.eot");
-  src: url("../fonts/FuturaPT-BookObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-BookObl.woff2") format("woff2"), url("../fonts/FuturaPT-BookObl.woff") format("woff"), url("../fonts/FuturaPT-BookObl.ttf") format("truetype"), url("../fonts/FuturaPT-BookObl.svg#FuturaPT-BookObl") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT Cond';
-  src: url("../fonts/FuturaPTCond-Medium.eot");
-  src: url("../fonts/FuturaPTCond-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-Medium.woff2") format("woff2"), url("../fonts/FuturaPTCond-Medium.woff") format("woff"), url("../fonts/FuturaPTCond-Medium.ttf") format("truetype"), url("../fonts/FuturaPTCond-Medium.svg#FuturaPTCond-Medium") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("../fonts/FuturaPT-MediumObl.eot");
-  src: url("../fonts/FuturaPT-MediumObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-MediumObl.woff2") format("woff2"), url("../fonts/FuturaPT-MediumObl.woff") format("woff"), url("../fonts/FuturaPT-MediumObl.ttf") format("truetype"), url("../fonts/FuturaPT-MediumObl.svg#FuturaPT-MediumObl") format("svg");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("../fonts/FuturaPT-Bold.eot");
-  src: url("../fonts/FuturaPT-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Bold.woff2") format("woff2"), url("../fonts/FuturaPT-Bold.woff") format("woff"), url("../fonts/FuturaPT-Bold.ttf") format("truetype"), url("../fonts/FuturaPT-Bold.svg#FuturaPT-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT Demi';
-  src: url("../fonts/FuturaPT-Demi.eot");
-  src: url("../fonts/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Demi.woff2") format("woff2"), url("../fonts/FuturaPT-Demi.woff") format("woff"), url("../fonts/FuturaPT-Demi.ttf") format("truetype"), url("../fonts/FuturaPT-Demi.svg#FuturaPT-Demi") format("svg");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT Extra';
-  src: url("../fonts/FuturaPT-ExtraBold.eot");
-  src: url("../fonts/FuturaPT-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-ExtraBold.woff2") format("woff2"), url("../fonts/FuturaPT-ExtraBold.woff") format("woff"), url("../fonts/FuturaPT-ExtraBold.ttf") format("truetype"), url("../fonts/FuturaPT-ExtraBold.svg#FuturaPT-ExtraBold") format("svg");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT Cond Extra';
-  src: url("../fonts/FuturaPTCond-ExtraBold.eot");
-  src: url("../fonts/FuturaPTCond-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-ExtraBold.woff2") format("woff2"), url("../fonts/FuturaPTCond-ExtraBold.woff") format("woff"), url("../fonts/FuturaPTCond-ExtraBold.ttf") format("truetype"), url("../fonts/FuturaPTCond-ExtraBold.svg#FuturaPTCond-ExtraBold") format("svg");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT Cond';
-  src: url("../fonts/FuturaPTCond-BoldObl.eot");
-  src: url("../fonts/FuturaPTCond-BoldObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-BoldObl.woff2") format("woff2"), url("../fonts/FuturaPTCond-BoldObl.woff") format("woff"), url("../fonts/FuturaPTCond-BoldObl.ttf") format("truetype"), url("../fonts/FuturaPTCond-BoldObl.svg#FuturaPTCond-BoldObl") format("svg");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT Cond';
-  src: url("../fonts/FuturaPTCond-Bold.eot");
-  src: url("../fonts/FuturaPTCond-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-Bold.woff2") format("woff2"), url("../fonts/FuturaPTCond-Bold.woff") format("woff"), url("../fonts/FuturaPTCond-Bold.ttf") format("truetype"), url("../fonts/FuturaPTCond-Bold.svg#FuturaPTCond-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT Cond';
-  src: url("../fonts/FuturaPTCond-MediumObl.eot");
-  src: url("../fonts/FuturaPTCond-MediumObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-MediumObl.woff2") format("woff2"), url("../fonts/FuturaPTCond-MediumObl.woff") format("woff"), url("../fonts/FuturaPTCond-MediumObl.ttf") format("truetype"), url("../fonts/FuturaPTCond-MediumObl.svg#FuturaPTCond-MediumObl") format("svg");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT Demi';
-  src: url("../fonts/FuturaPT-DemiObl.eot");
-  src: url("../fonts/FuturaPT-DemiObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-DemiObl.woff2") format("woff2"), url("../fonts/FuturaPT-DemiObl.woff") format("woff"), url("../fonts/FuturaPT-DemiObl.ttf") format("truetype"), url("../fonts/FuturaPT-DemiObl.svg#FuturaPT-DemiObl") format("svg");
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT Cond Book';
-  src: url("../fonts/FuturaPTCond-BookObl.eot");
-  src: url("../fonts/FuturaPTCond-BookObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-BookObl.woff2") format("woff2"), url("../fonts/FuturaPTCond-BookObl.woff") format("woff"), url("../fonts/FuturaPTCond-BookObl.ttf") format("truetype"), url("../fonts/FuturaPTCond-BookObl.svg#FuturaPTCond-BookObl") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("../fonts/FuturaPT-LightObl.eot");
-  src: url("../fonts/FuturaPT-LightObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-LightObl.woff2") format("woff2"), url("../fonts/FuturaPT-LightObl.woff") format("woff"), url("../fonts/FuturaPT-LightObl.ttf") format("truetype"), url("../fonts/FuturaPT-LightObl.svg#FuturaPT-LightObl") format("svg");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura PT Cond Book';
-  src: url("../fonts/FuturaPTCond-Book.eot");
-  src: url("../fonts/FuturaPTCond-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-Book.woff2") format("woff2"), url("../fonts/FuturaPTCond-Book.woff") format("woff"), url("../fonts/FuturaPTCond-Book.ttf") format("truetype"), url("../fonts/FuturaPTCond-Book.svg#FuturaPTCond-Book") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("../fonts/FuturaPT-Heavy.eot");
-  src: url("../fonts/FuturaPT-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Heavy.woff2") format("woff2"), url("../fonts/FuturaPT-Heavy.woff") format("woff"), url("../fonts/FuturaPT-Heavy.ttf") format("truetype"), url("../fonts/FuturaPT-Heavy.svg#FuturaPT-Heavy") format("svg");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura PT';
-  src: url("../fonts/FuturaPT-Light.eot");
-  src: url("../fonts/FuturaPT-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Light.woff2") format("woff2"), url("../fonts/FuturaPT-Light.woff") format("woff"), url("../fonts/FuturaPT-Light.ttf") format("truetype"), url("../fonts/FuturaPT-Light.svg#FuturaPT-Light") format("svg");
-  font-weight: 300;
-  font-style: normal;
-}
-
-a {
-  -webkit-transition: color .12s ease-out;
-  -o-transition: color .12s ease-out;
-  transition: color .12s ease-out;
+html {
+  height: 100%;
 }
 
 body {
-  font: 16px "Futura PT", sans-serif;
+  font: 16px "Futura PT Book", sans-serif;
   color: #333;
+  min-width: 320px;
+}
+
+a {
+  color: #265fbf;
+  text-decoration: none;
+  -webkit-transition: color 0.12s ease-out;
+  -o-transition: color 0.12s ease-out;
+  transition: color 0.12s ease-out;
+}
+
+a:hover {
+  color: #2254aa;
+}
+
+a:active {
+  color: #1f4e9d;
 }
 
 .pink {
@@ -5120,17 +4869,18 @@ body {
 
 .btn {
   background: #265fbf;
-  -webkit-border-radius: 2px;
-          border-radius: 2px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  font-family: "Futura PT", sans-serif;
   font-weight: 900;
   border: none;
   color: #fff;
   outline: 0;
   cursor: pointer;
   padding: 12px 16px;
-  -webkit-transition: all .12s ease-out;
-  -o-transition: all .12s ease-out;
-  transition: all .12s ease-out;
+  -webkit-transition: all 0.12s ease-out;
+  -o-transition: all 0.12s ease-out;
+  transition: all 0.12s ease-out;
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -5143,21 +4893,78 @@ body {
 
 .btn:hover {
   background: #2254aa;
+  color: #fff;
+}
+
+.btn:active {
+  background: #1f4e9d;
+  color: #fff;
 }
 
 .container {
   max-width: 1230px;
 }
 
-.navbar {
-  background-color: #153c89;
-  border-bottom: 1px solid #b7b7b7;
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
 }
 
-.navbar__nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.wrapper__inner {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.wrapper__inner:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #000000;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.wrapper__inner.overlay {
+  position: relative;
+}
+
+.wrapper__inner.overlay:after {
+  -webkit-transition: opacity .1s ease-out;
+  -o-transition: opacity .1s ease-out;
+  transition: opacity .1s ease-out;
+  -webkit-transition-delay: .05s;
+       -o-transition-delay: .05s;
+          transition-delay: .05s;
+  opacity: 0.6;
+  visibility: visible;
+}
+
+.header__navbar {
+  background-color: #153c89;
+  border-bottom: 1px solid #b7b7b7;
+  padding: 8px 0;
+}
+
+.header__navbar .hamb {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5175,16 +4982,15 @@ body {
           flex-wrap: wrap;
 }
 
-.navbar__nav a {
+.navbar a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 40px;
-  padding: 12px 2px;
+  font: 300 14px "Futura PT", sans-serif;
+  padding: 4px;
+  line-height: 1.1;
 }
 
-.navbar__nav a:hover {
+.navbar a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -5192,6 +4998,8 @@ body {
   background-color: #f6f6f6;
   padding: 7px 0 10px;
   border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 9992;
 }
 
 .logo {
@@ -5216,8 +5024,72 @@ body {
   font: 14px "Futura PT Book", sans-serif;
 }
 
+.hamb {
+  width: 18px;
+  height: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hamb__item {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 2px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hamb__item:not(:first-child) {
+  margin-top: 3px;
+}
+
+.hamb.active .hamb__item:first-of-type {
+  -webkit-transform: translateY(5px) translateZ(0) rotate(45deg);
+          transform: translateY(5px) translateZ(0) rotate(45deg);
+}
+
+.hamb.active .hamb__item:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamb.active .hamb__item:nth-of-type(3) {
+  -webkit-transform: translateY(-5px) translateZ(0) rotate(-45deg);
+          transform: translateY(-5px) translateZ(0) rotate(-45deg);
+}
+
+.catalog-btn {
+  position: relative;
+  padding-left: 60px;
+  padding-right: 20px;
+  width: 170px;
+}
+
+.catalog-btn__hamb {
+  left: 15px;
+  top: 50%;
+  margin-top: -6px;
+  position: absolute;
+}
+
+.catalog-btn.active {
+  background-color: #fff;
+  color: #2254aa;
+}
+
+.catalog-btn.active .hamb__item {
+  background-color: #2254aa;
+}
+
 .phone a {
   color: #333;
+  font-family: "Futura PT", sans-serif;
   font-weight: 900;
   font-size: 18px;
   text-decoration: none;
@@ -5239,15 +5111,15 @@ body {
 }
 
 .basket-btn {
-  -webkit-transition: background .2s ease-in-out;
-  -o-transition: background .2s ease-in-out;
-  transition: background .2s ease-in-out;
+  -webkit-transition: background 0.12s ease-in-out;
+  -o-transition: background 0.12s ease-in-out;
+  transition: background 0.12s ease-in-out;
   background: #fff;
   border: 1px solid #eee;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   height: 40px;
-  padding: 7px 14px;
+  padding: 7px 14px 7px 45px;
   cursor: pointer;
   color: #a6a6a6;
   display: -webkit-box;
@@ -5258,6 +5130,22 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  outline: 0;
+  width: 170px;
+}
+
+.basket-btn:before {
+  content: '';
+  position: absolute;
+  width: 19px;
+  height: 18px;
+  left: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url("../img/icons/basket.png") no-repeat center;
 }
 
 .basket-btn:hover {
@@ -5265,22 +5153,253 @@ body {
   background-color: #eee;
 }
 
+.basket-btn:active {
+  background-color: #e6e6e6;
+}
+
 .basket-btn__label {
+  font-family: "Futura PT", sans-serif;
   font-weight: 900;
   margin-right: 14px;
 }
 
 .basket-btn__count {
-  font-size: 14px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 32px;
+  max-width: 48px;
   height: 24px;
+  background: #ebebeb;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  font-size: 14px;
   line-height: 24px;
+}
+
+.slider .slick-prev,
+.slider .slick-next {
+  width: 50px;
+  height: 50px;
+  background-color: #eff3ff;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: #ebebeb;
+  -webkit-transition: background-color 0.12s;
+  -o-transition: background-color 0.12s;
+  transition: background-color 0.12s;
+}
+
+.slider .slick-prev:hover,
+.slider .slick-next:hover {
+  background-color: #e5ebff;
+}
+
+.slider .slick-prev:active,
+.slider .slick-next:active {
+  background-color: #dde6ff;
+}
+
+.slider .slick-prev:before,
+.slider .slick-next:before {
+  content: '';
+  width: 8px;
+  height: 14px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -7px;
+}
+
+.slider .slick-prev {
+  left: 0;
+  z-index: 99;
+}
+
+.slider .slick-prev:before {
+  margin-left: -5px;
+  background-image: url("../img/icons/left-arrow1.png");
+}
+
+.slider .slick-next {
+  right: 0;
+}
+
+.slider .slick-next:before {
+  margin-left: -3px;
+  background-image: url("../img/icons/right-arrow1.png");
+}
+
+.slider .slick-dots li {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider .slick-dots li.slick-active button {
+  background-color: #265fbf;
+}
+
+.slider .slick-dots li.slick-active button:hover {
+  background-color: #265fbf;
+}
+
+.slider .slick-dots li button {
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  background-color: #e1e1e1;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-transition: 0.12s background-color;
+  -o-transition: 0.12s background-color;
+  transition: 0.12s background-color;
+}
+
+.slider .slick-dots li button:hover {
+  background-color: #d4d4d4;
+}
+
+.slider .slick-dots li button:before {
+  display: none;
+}
+
+.hero-slider-wrap {
+  padding-top: 46px;
+}
+
+.hero-slider .slick-prev,
+.hero-slider .slick-next {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+
+.hero-slider .slick-prev:hover,
+.hero-slider .slick-next:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.hero-slider .slick-prev {
+  left: 30px;
+}
+
+.hero-slider .slick-prev:before {
+  background-image: url("../img/icons/left-arrow.png");
+}
+
+.hero-slider .slick-next {
+  right: 30px;
+}
+
+.hero-slider .slick-next:before {
+  background-image: url("../img/icons/right-arrow.png");
+}
+
+.hero-slider .slick-slide {
+  outline: 0 !important;
+}
+
+.hero-slide {
+  background-color: #2d7753;
+  color: #fff;
+  font: 900 36px "Futura PT", sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 100px 30px 115px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.hero-slide:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  visibility: visible;
+  content: "";
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+  opacity: 0;
+  background: #fff;
+}
+
+.hero-slide:hover {
+  color: #ffffff;
+}
+
+.hero-slide:hover:after {
+  opacity: 0.15;
+}
+
+.hero-slide.slick-slide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-slide__text {
+  max-width: 570px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-slide__img {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 245px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-slide__img img {
+  max-height: 100%;
+  width: auto;
+}
+
+.hero-slide .pink {
+  color: #ffa6ec;
 }
 
 .section {
-  padding: 65px 0;
+  padding: 50px 0;
 }
 
 .section__title {
@@ -5290,6 +5409,7 @@ body {
 
 .section__title h2 {
   font-size: 36px;
+  font-family: "Futura PT", sans-serif;
   font-weight: 900;
   margin: 0;
 }
@@ -5298,8 +5418,15 @@ body {
   background-color: #e5ecfe;
 }
 
+.goods-section-wrap {
+  margin-top: -25px;
+}
+
+.goods-section-wrap > div {
+  margin-top: 25px;
+}
+
 .goods-section {
-  display: block;
   background-color: #f6f6f6;
   padding: 35px;
   display: -webkit-box;
@@ -5311,6 +5438,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
 }
 
 .goods-section:after {
@@ -5335,7 +5465,18 @@ body {
 }
 
 .goods-section__img {
-  margin-right: 50px;
+  max-width: 250px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+  min-width: 100px;
+}
+
+.goods-section__img img {
+  max-height: 230px;
+  width: 100%;
 }
 
 .goods-section__name {
@@ -5361,6 +5502,11 @@ body {
       -ms-flex: 50%;
           flex: 50%;
   margin-top: 30px;
+  padding-right: 30px;
+}
+
+.features .feature-item__descr {
+  max-width: 330px;
 }
 
 .feature-item__icon, .info-item__icon {
@@ -5407,6 +5553,7 @@ body {
 .feature-item__title {
   margin: 0 0 15px;
   font-size: 20px;
+  font-family: "Futura PT", sans-serif;
   font-weight: 900;
   line-height: 1;
 }
@@ -5414,6 +5561,18 @@ body {
 .feature-item__text {
   margin: 0;
   font: 14px "Futura PT Book", sans-serif;
+}
+
+.info-blocks {
+  padding-bottom: 100px;
+}
+
+.info-items-wrap {
+  margin-top: -40px;
+}
+
+.info-items-wrap > div {
+  margin-top: 40px;
 }
 
 .info-item {
@@ -5440,15 +5599,850 @@ body {
 
 .info-item__title {
   font-size: 18px;
+  font-family: "Futura PT", sans-serif;
   font-weight: 900;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
+.info-item .btn {
+  max-width: 320px;
+  margin: auto;
+}
+
+.docs-slider {
+  padding: 0 100px;
+}
+
+.docs-slider .slick-list {
+  padding-top: 20px;
+  margin-top: -20px;
+}
+
+.docs-slider .slick-slide a {
+  outline: 0 !important;
+}
+
+.docs-slider .slick-slide img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.docs-slider .slick-slide p {
+  text-align: center;
+}
+
+.helper-banner {
+  height: 440px;
+  background-color: #e5ecfe;
+}
+
+.helper-banner .container {
+  height: 100%;
+  position: relative;
+}
+
+.helper-banner .container > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 100px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.helper-banner__title, .helper-banner__subtitle {
+  max-width: 670px;
+  font-family: "Futura PT", sans-serif;
+  font-weight: 900;
+}
+
+.helper-banner__title {
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.helper-banner__subtitle {
+  font-size: 30px;
+  color: #d64ab8;
+}
+
+.helper-banner__img img {
+  width: 100%;
+  height: auto;
+}
+
+.helper-banner .btn {
+  max-width: 200px;
+  width: 100%;
+  position: absolute;
+  top: 300px;
+}
+
+.about-section {
+  padding-top: 75px;
+  overflow: hidden;
+}
+
+.about-section:before {
+  content: '';
+  position: absolute;
+  background-color: #265fbf;
+  left: 0;
+  right: -webkit-calc(50% + 15px);
+  right: calc(50% + 15px);
+  height: 430px;
+}
+
+.about-section__img {
+  text-align: center;
+  height: 430px;
+  position: relative;
+  float: right;
+  margin-bottom: 40px;
+}
+
+.about-section__img:before {
+  content: '';
+  position: absolute;
+  width: 365px;
+  height: 470px;
+  background-color: #e5ecfe;
+  left: 35px;
+  top: -20px;
+  z-index: 1;
+}
+
+.about-section__img:after {
+  content: '';
+  position: absolute;
+  width: 345px;
+  height: 450px;
+  background-color: #fff;
+  left: 45px;
+  top: -10px;
+  z-index: 2;
+}
+
+.about-section__img > div:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 470px;
+  background-color: #e5ecfe;
+  left: 35px;
+  top: -20px;
+  z-index: 4;
+}
+
+.about-section__img img {
+  display: block;
+  width: 100%;
+  height: 430px;
+  width: 540px;
+  position: relative;
+  z-index: 3;
+  border: 15px solid #265fbf;
+}
+
+.about h1 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.about__title {
+  font-size: 20px;
+  margin: 10px 0 0;
+}
+
+.about__text p {
+  line-height: 1.3;
+}
+
+.about__link {
+  font-weight: 900;
+  font-family: "Futura PT", sans-serif;
+}
+
+.about__link:before {
+  width: 7px;
+  height: 11px;
+  margin-right: 9px;
+  position: relative;
+  top: -2px;
+  content: '';
+  display: inline-block;
+  background: url("../img/icons/arrow-blue.png") no-repeat center;
+}
+
+.categories {
+  background-color: #f6f6f6;
+  position: absolute;
+  z-index: 9991;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.12), 0 9px 46px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.12), 0 9px 46px 0 rgba(0, 0, 0, 0.06);
+}
+
+.categories.opened {
+  -webkit-transition: .1s transform ease-out;
+  -o-transition: .1s transform ease-out;
+  transition: .1s transform ease-out;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.categories__list {
+  padding: 20px 0;
+  min-width: 220px;
+}
+
+.categories__items {
+  background-color: #ffff;
+  padding: 24px 15px 24px 80px;
+}
+
+.categories .category-items {
+  display: none;
+}
+
+.categories .category-items.active {
+  display: block;
+}
+
+.categories-list li.active {
+  background-color: #fff;
+}
+
+.categories-list li.active a {
+  font-weight: 600;
+}
+
+.categories-list a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
+  text-decoration: none;
+  display: block;
+  line-height: 1;
+  padding: 7px 14px;
+  outline: 0;
+}
+
+.category-items li {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.category-items li:before {
+  content: '';
+  width: 5px;
+  height: 9px;
+  display: inline-block;
+  margin-right: 12px;
+  background: url("../img/icons/arrow-pink.png") no-repeat center;
+}
+
+.category-items a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
+  line-height: 1;
+  padding: 4px 0;
+  text-decoration: none;
+  outline: 0;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.category-items a:hover {
+  font-weight: 600;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  padding-top: 45px;
+  padding-bottom: 25px;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+  margin-top: -30px;
+}
+
+.footer__nav .footer-nav {
+  margin-top: 30px;
+}
+
+.footer__nav .footer-nav--others {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 320px;
+}
+
+.footer__nav .footer-nav--others ul {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+}
+
+.footer__partners {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer__partners .footer-partner:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer__contacts {
+  margin-bottom: 25px;
+}
+
+.footer-nav__title {
+  font-size: 18px;
+  font-family: "Futura PT", sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.footer-nav li:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.footer-nav a:hover {
+  color: #265fbf;
+}
+
+.footer-privacy {
+  font-size: 14px;
+  color: #818181;
+}
+
+.footer-privacy__item {
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+}
+
+.footer-contacts {
+  background-color: #f5f5f5;
+}
+
+.footer-contacts .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 35px;
+}
+
+.footer-contacts strong {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 900;
+}
+
+.footer-contacts a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.footer-partner {
+  text-align: center;
+}
+
+.footer-partner span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 13px;
+}
+
+.footer-partner a {
+  display: block;
+}
+
+.footer-info .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.footer-info__company {
+  margin-right: 50px;
+}
+
+.footer-info__about {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  font-size: 12px;
+  color: #818181;
+}
+
+.policy-links a {
+  display: block;
+  color: #818181;
+  text-decoration: none;
+}
+
+.policy-links a:hover {
+  color: #265fbf;
+}
+
+.social-icons {
+  font-size: 0;
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-icons__link {
+  margin: 0 6px;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0 5px;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  -webkit-background-size: 30px 30px;
+          background-size: 30px 30px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #e1e1e1;
+  margin-left: 10px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  overflow: hidden;
+}
+
+.social-icons__link--ok:hover {
+  background: #f07225;
+}
+
+.social-icons__link--vk:hover {
+  background: #4781a9;
+}
+
+.social-icons__link--fb:hover {
+  background: #3a5892;
+}
+
+.social-icons__link--instagram:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  background-image: -webkit-radial-gradient(27% 108%, circle, #fd5, #fd5 10%, #ff543e 50%, #c837ab);
+  background-image: -o-radial-gradient(27% 108%, circle, #fd5, #fd5 10%, #ff543e 50%, #c837ab);
+  background-image: radial-gradient(circle at 27% 108%, #fd5, #fd5 10%, #ff543e 50%, #c837ab);
+}
+
+.social-icons__link--instagram:after {
+  background: #e1e1e1;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.social-icons__link--instagram:hover:after {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.social-icons__link--instagram .svg-icon {
+  z-index: 1;
+  position: relative;
+}
+
+.social-icons .svg-icon {
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  fill: #fff;
+}
+
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .navbar {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .goods-section__name {
+    font-size: 26px;
+  }
+  .features {
+    padding: 0;
+  }
+  .hero-slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: initial;
+    padding-bottom: 30px;
+  }
+  .hero-slide__text {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .hero-slide__img {
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    max-height: 200px;
+    width: auto;
+    text-align: center;
+    display: block;
+  }
+  .hero-slide__img img {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+  .helper-banner {
+    height: 360px;
+  }
+  .helper-banner__title {
+    font-size: 28px;
+  }
+  .helper-banner__subtitle {
+    font-size: 22px;
+  }
+  .helper-banner .container > div {
+    padding-top: 80px;
+  }
+  .helper-banner .btn {
+    top: 240px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header__navbar .hamb {
+    display: inline-block;
+  }
+  .hero-slider-wrap .container {
+    padding: 0;
+  }
+  .hero-slider .slick-next {
+    right: 10px;
+  }
+  .hero-slider .slick-prev {
+    left: 10px;
+  }
+  .slider .slick-next,
+  .slider .slick-prev {
+    width: 40px;
+    height: 40px;
+  }
+  .about-section__txt {
+    text-align: center;
+  }
+  .helper-banner {
+    height: initial;
+    padding: 30px 15px;
+    text-align: center;
+  }
+  .helper-banner .container > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  .helper-banner__descr {
+    margin-bottom: 30px;
+  }
+  .helper-banner__img {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    max-width: 380px;
+  }
+  .helper-banner__title {
+    font-size: 28px;
+  }
+  .helper-banner__subtitle {
+    font-size: 22px;
+  }
+  .helper-banner .btn {
+    width: 100%;
+    max-width: 380px;
+    position: static;
+  }
+  .goods-section {
+    height: initial;
+    padding: 30px 10px;
+  }
+  .goods-section__img {
+    min-width: 60px;
+    -webkit-box-flex: 20%;
+    -webkit-flex: 20%;
+        -ms-flex: 20%;
+            flex: 20%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .goods-section__name {
+    font-size: 24px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .navbar {
+    display: none;
+  }
+  .section__title h2 {
+    font-size: 28px;
+  }
+  .hero-slide {
+    padding: 30px;
+  }
+  .hero-slide__text {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  .features {
+    padding: 0;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .features .feature-item {
+    -webkit-box-flex: initial;
+    -webkit-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+  }
+  .features .feature-item__icon {
+    width: 65px;
+    height: 65px;
+  }
+  .footer__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .footer__partners {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .footer-nav__title {
+    margin-bottom: 12px;
+  }
+  .footer-privacy {
+    text-align: center;
+  }
+  .footer-contacts .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    max-width: 600px;
+  }
+  .footer-contacts .container > div:first-child {
+    margin-bottom: 10px;
+  }
+  .footer-info .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .footer-info__about {
+    margin-bottom: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-info__company {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */

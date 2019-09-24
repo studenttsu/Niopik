@@ -2,6 +2,7 @@
 /.git/
 /src/css/*
 /src/libs/*
+/dist/
 /**/_backstage
 /**/package-lock.json
 /**/Thumbs.db

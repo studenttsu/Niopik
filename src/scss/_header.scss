@@ -91,7 +91,7 @@
         display: none;
 
         .hamb__item {
-            background-color: #265fbf;
+            background-color: $blue;
         }
     }
 
@@ -136,7 +136,7 @@
 
     span {
         display: inline-block;
-        color: #265fbf;
+        color: $blue;
         font: 14px $futura-book;
     }
 

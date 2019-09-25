@@ -49,6 +49,7 @@ gulp.task('scss', () => gulp
 
 gulp.task('watch', ['removedist', 'html', 'scss', 'imagemin', 'fonts', 'js', 'browser-sync'], () => {
     gulp.watch('src/scss/**/*.scss', ['scss']);
+    gulp.watch('img/**/*', ['imagemin']);
     gulp.watch(['libs/**/*.js', 'src/js/main.js'], ['js']);
     gulp.watch(['src/**/*.html'], ['html', browserSync.reload]);
 });

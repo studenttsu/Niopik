@@ -23,51 +23,21 @@ body {
 }
 
 a {
-    color: #265fbf;
+    color: $blue;
     text-decoration: none;
     transition: color $easing-time ease-out;
 
     &:hover {
-        color: darken(#265fbf, 5%)
+        color: darken($blue, 5%)
     }
 
     &:active {
-        color: darken(#265fbf, 8%)
+        color: darken($blue, 8%)
     }
 }
 
 .pink {
     color: $pink-color;
-}
-
-.btn {
-    background: #265fbf;
-    border-radius: $border-radius;
-    font-family: $futura; font-weight: 900;
-    border: none;
-    color: #fff;
-    outline: 0;
-    cursor: pointer;
-    padding: 12px 16px;
-    transition: all $easing-time ease-out;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-
-    &--block {
-        display: block;
-        width: 100%;
-    }
-
-    &:hover {
-        background: darken(#265fbf, 5%);
-        color: #fff;
-    }
-
-    &:active {
-        background: darken(#265fbf, 8%);
-        color: #fff;
-    }
 }
 
 .container {
@@ -108,6 +78,7 @@ a {
     }
 }
 
+@import "components";
 @import "header";
 
 .slider {
@@ -168,10 +139,10 @@ a {
             justify-content: center;
             
             &.slick-active button {
-                background-color: #265fbf;
+                background-color: $blue;
 
                 &:hover {
-                    background-color: #265fbf;
+                    background-color: $blue;
                 }
             }
 
@@ -400,7 +371,7 @@ a {
 }
 
 %circle-icon {
-    border: 5px solid #265fbf;
+    border: 5px solid $blue;
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -558,7 +529,7 @@ a {
     &:before {
         content: '';
         position: absolute;
-        background-color: #265fbf;
+        background-color: $blue;
         left: 0;
         right: calc(50% + 15px);
         height: 430px;
@@ -611,16 +582,21 @@ a {
             width: 540px;
             position: relative;
             z-index: 3;
-            border: 15px solid #265fbf;;
+            border: 15px solid $blue;;
         }
     }
 }
 
 .about {
-    h1 {
+    h1.text {
         font-size: 14px;
         font-weight: 400;
         margin: 0;
+    }
+
+    h1 {
+        font: 900 20px $futura;
+        margin: 0 0 35px;
     }
 
     &__title {
@@ -842,6 +818,207 @@ a {
     &__phone {
         text-align: center;
         padding: 20px 0;
+    }
+}
+
+.breadcrumbs-wrap {
+    padding: 16px 0;
+}
+
+.filter-group {
+    &__header {
+        font: 900 18px $futura;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+}
+
+.checkbox-list {
+    .checkbox {
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 14px;
+        }
+    }
+}
+
+.banner {
+    background-image: url('../img/banner-pattern.png');
+    background-position: center;
+    background-repeat: repeat;
+    position: relative;
+    padding: 15px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__text {
+        font: 900 36px $futura;
+        color: #fff;
+        line-height: 1;
+        max-width: 500px;
+        padding: 45px;
+        padding-right: 0;
+        box-sizing: content-box;
+
+        span {
+            color: #8d1b43;
+        }
+    }
+
+    &__img {
+        max-width: 540px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        max-width: 140px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.main-content {
+    padding: 45px 0;
+}
+
+.goods-list {
+    .goods-card {
+        &:not(:last-child) {
+            border-bottom: 1px solid #d7d7d7;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+.goods-card {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__img {
+        max-width: 200px;
+        text-align: center;
+        padding: 0 20px;
+        margin-right: 30px;
+
+        a {
+            display: block;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                visibility: visible;
+                content: "";
+                transition: opacity .3s;
+                opacity: 0;
+                background: #fff;
+            }
+        
+            &:hover:after {
+                opacity: 0.15;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__descr {
+        flex: 1;
+    }
+
+    &__title {
+        a {
+            font: 900 18px $futura;
+            color: #8d1b43;
+        }
+    }
+
+    &__short-info {
+        margin: 12px 0;
+    }
+
+    &__params {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        dl {
+            margin: 0;
+            padding: 0;
+            flex: 1;
+
+            &:first-child {
+                max-width: 210px;
+            }
+
+            &:last-child {
+                max-width: 310px;
+            }
+
+            dt {
+                font: 900 14px $futura;
+                display: block;
+                line-height: 1;
+                margin-bottom: 4px;
+
+                &:after {
+                    content: ':';
+                }
+            }
+
+            dd {
+                margin: 0;
+                line-height: 1;
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+
+        > div {
+            max-width: 170px;
+            margin-right: 30px;
+            flex: 1;
+        }
+
+        .btn {
+            max-width: 170px;
+            width: 100%;
+        }
+    }
+
+    &__price {
+        color: #da67a3;
+        font: 900 25px $futura;
     }
 }
 

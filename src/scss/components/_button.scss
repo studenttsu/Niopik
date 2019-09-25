@@ -1,0 +1,35 @@
+.btn {
+    background: $blue;
+    border-radius: $border-radius;
+    font-family: $futura; font-weight: 900;
+    border: none;
+    color: #fff;
+    outline: 0;
+    cursor: pointer;
+    padding: 12px 16px;
+    transition: all $easing-time ease-out;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+
+    &--block {
+        display: block;
+        width: 100%;
+    }
+
+    &--link {
+        background: transparent;
+        color: $blue;
+    }
+
+    &:hover {
+        background: darken($blue, 5%);
+        color: #fff;
+    }
+
+    &:active {
+        background: darken($blue, 8%);
+        color: #fff;
+    }
+}

@@ -1,0 +1,36 @@
+.breadcrumbs {
+    @extend %reset-list-style;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+        font-size: 14px;
+        position: relative;
+        line-height: 1;
+
+        &:not(:first-child) {
+            padding-left: 12px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 4px;
+                top: 8px;
+                width: 4px;
+                height: 1px;
+                background: #666;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #666;
+        transition: color .12s ease-out;
+
+        &:hover {
+            color: hsla(0,0%,60%,.8);
+        }
+    }
+}

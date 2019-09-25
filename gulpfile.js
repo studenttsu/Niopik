@@ -15,7 +15,7 @@ const rigger = require("gulp-rigger");
 gulp.task('browser-sync', () => {
     browserSync({
         server: {
-            baseDir: 'src'
+            baseDir: 'dist'
         },
         notify: false
     });
@@ -24,18 +24,17 @@ gulp.task('browser-sync', () => {
 gulp.task('html', () => gulp
     .src('src/*.html')
     .pipe(rigger())
-    .pipe(gulp.dest('src'))
+    .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({ stream: true }))
 );
 
 gulp.task('js', () => gulp
     .src([
-        'scr/libs/slick-carousel/slick/slick.min.js',
         'src/js/main.js',
     ])
     .pipe(concat('scripts.min.js'))
     .pipe(uglify()) // Минимизировать весь js (на выбор)
-    .pipe(gulp.dest('src/js'))
+    .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({ stream: true }))
 );
 
@@ -44,14 +43,14 @@ gulp.task('scss', () => gulp
     .pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
     .pipe(autoprefixer(['last 15 versions']))
     // .pipe(cleanCSS())
-    .pipe(gulp.dest('src/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream())
 );
 
-gulp.task('watch', ['html', 'scss', 'js', 'browser-sync'], () => {
+gulp.task('watch', ['removedist', 'html', 'scss', 'imagemin', 'fonts', 'js', 'browser-sync'], () => {
     gulp.watch('src/scss/**/*.scss', ['scss']);
     gulp.watch(['libs/**/*.js', 'src/js/main.js'], ['js']);
-    gulp.watch('src/*.html', browserSync.reload);
+    gulp.watch(['src/**/*.html'], ['html', browserSync.reload]);
 });
 
 gulp.task('imagemin', () => gulp
@@ -60,10 +59,16 @@ gulp.task('imagemin', () => gulp
     .pipe(gulp.dest('dist/img'))
 );
 
-gulp.task('build', ['removedist', 'imagemin', 'html', 'scss', 'js'], () => {
+gulp.task('fonts', () => gulp
+    .src([
+        'src/fonts/**/*',
+    ])
+    .pipe(gulp.dest('dist/fonts'))
+);
+
+gulp.task('build', ['removedist', 'imagemin', 'fonts', 'html', 'scss', 'js'], () => {
 
     gulp.src([
-        'src/*.html',
         'src/.htaccess',
     ]).pipe(gulp.dest('dist'));
 
@@ -74,10 +79,6 @@ gulp.task('build', ['removedist', 'imagemin', 'html', 'scss', 'js'], () => {
     gulp.src([
         'src/js/scripts.min.js',
     ]).pipe(gulp.dest('dist/js'));
-
-    gulp.src([
-        'src/fonts/**/*',
-    ]).pipe(gulp.dest('dist/fonts'));
 
 });
 

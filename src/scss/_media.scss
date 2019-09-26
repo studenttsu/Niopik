@@ -464,6 +464,40 @@
             }
         }
     }
+
+    .application-more {
+        &__content {
+            margin-top: 20px;
+
+            p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .banner-wrapper {
+        display: block;
+
+        .banner-img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .banner-text {
+            width: 100%;
+            text-align: center;
+
+            .title {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+            
+            .btn {
+                margin: 0 auto;
+            }
+        }
+    }
 }
 
 /* Extra Small Devices, Phones */

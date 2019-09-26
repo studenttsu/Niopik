@@ -1,5 +1,15 @@
 @import "vars";
 
+@media only screen and (max-width: 1230px) {
+    .news {
+        &__nav {
+            &.scroll {
+                right: 15px;
+            }
+        }
+    }
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1024px) {
     .logo {
@@ -21,6 +31,31 @@
         .phone {
             &__descr {
                 font-size: 14px;
+            }
+        }
+    }
+
+    .news {
+        &__wrapper {
+            padding-right: 420px;
+        }
+
+        &__nav {
+            padding: 20px 10px;
+            max-width: 400px;
+        }
+    }
+
+    .reviews {
+        li {
+            width: calc(100%/3 - 13.4px);
+
+            &:nth-child(4n) {
+                margin-right: 20px;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
             }
         }
     }
@@ -349,6 +384,86 @@
             top: 88px;
         }
     }
+
+    .news {
+        &__wrapper {
+            padding-right: 0;
+        }
+
+        &__list {
+            margin: 0 auto;
+
+            li {
+                padding: 15px 10px;
+            }
+
+            &-text {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__link {
+            font-size: 14px;
+        }
+
+        &__date {
+            font-size: 14px;
+        }
+
+        &__nav {
+            position: static;
+            max-width: 500px;
+            margin: 15px auto 0;
+            padding: 15px 10px;
+
+            &-item {
+                a {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            margin: 0 auto;
+
+            img {
+                max-height: 250px;
+                margin: 0 auto 10px;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .reviews {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        li {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            margin-right: 0 !important;
+
+            a {
+                .name {
+                    font-size: 16px;
+                    margin-top: 10px;
+                }
+                .size {
+                    margin-top: 5px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -378,6 +493,34 @@
 
         img + span {
             margin-left: 15px;
+        }
+    }
+
+    .news__nav {
+        display: block;
+
+        &-item {
+            width: 100%;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                img {
+                    max-height: 150px;
+                }
+            }
+        }
+    }
+
+    .reviews {
+        display: block;
+
+        li {
+            width: 100%;
+            margin: 0 auto 20px !important;
         }
     }
 }

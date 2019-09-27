@@ -498,6 +498,44 @@
             }
         }
     }
+
+    .preim-list {
+        text-align: center;
+
+        li {
+            padding: 20px 10px;
+            display: block;
+        }
+
+        &__title {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        &__text {
+            width: 100%;
+            text-align: left;
+
+            p {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .about__images {
+        ul {
+            padding: 20px 20px 10px;
+            justify-content: space-between;
+
+            li {
+                margin-right: 0;
+                width: calc(50% - 10px);
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -555,6 +593,17 @@
         li {
             width: 100%;
             margin: 0 auto 20px !important;
+        }
+    }
+
+    .about__images {
+        ul {
+            display: block;
+
+            li {
+                width: 100%;
+                margin: 0 auto 10px !important;
+            }
         }
     }
 }

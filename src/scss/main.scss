@@ -877,104 +877,6 @@ a {
     }
 }
 
-.mobile-menu {
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100vh;
-    background-color: #ffffff;
-    overflow-x: hidden;
-    overflow-y: auto;
-    transition: all 0.12s;
-    opacity: 0;
-    visibility: hidden;
-    top: 10px;
-
-    &.opened {
-        visibility: visible;
-        opacity: 1;
-        top: 0px;
-    }
-
-    &__nav ul {
-        @extend .categories-list;
-
-        a {
-            font-size: 16px;
-            padding: 9px 14px;
-
-            &:hover {
-                background: #f6f6f6;
-            }
-        }
-    }
-
-    &__nav {
-        > ul > li {
-            border-bottom: 1px solid #e7e8ea;
-        }
-
-    }
-
-    .drop {        
-        > span {
-            font-weight: 300;
-            color: #333333;
-            text-decoration: none;
-            display: block;
-            line-height: 1;
-            padding: 9px 14px;
-            outline: 0;
-            position: relative;
-            cursor: pointer;
-
-            &:hover {
-                background: #f6f6f6;
-            }
-
-            &:after {
-                position: absolute;
-                right: 14px;
-                width: 7px;
-                height: 11px;
-                transform: rotate(90deg);
-                transition: .1s transform;
-                content: '';
-                display: inline-block;
-                background: url('../img/icons/arrow-blue.png') no-repeat center;
-            }
-        }
-
-        &.active {
-            > span {
-                font-weight: 600;
-
-                &:after {
-                    transform: rotate(270deg);
-                }
-            }
-        }
-    }
-
-    &__sub-nav {
-        padding-left: 20px !important;
-        display: none;
-
-        li {
-            &:not(:last-child) {
-                border-bottom: 1px solid #e7e8ea;
-            }
-        }
-    }
-
-    &__phone {
-        text-align: center;
-        padding: 20px 0;
-    }
-}
-
 .breadcrumbs-wrap {
     padding: 16px 0;
 }
@@ -1858,6 +1760,8 @@ a {
 }
 
 .modal {
+    border-radius: 3px;
+
     &__header {
         margin-bottom: 30px;
     }

@@ -23,10 +23,20 @@ $(function () {
         });
     })();
 
-    $('.goods-card__tare .select__dropdown li').on('click', function () {
+    $('.goods-card .select__dropdown li').on('click', function () {
         var price = $(this).data('price');
 
         $(this).closest('.goods-card').find('.goods-card__price').text(price + ' Р');
+    });
+
+    $('#open-filters').on('click', function() {
+        $('.goods-filters').addClass('opened');
+        $('body').addClass('hide-scroll');
+    });
+
+    $('#hide-filters').on('click', function() {
+        $('.goods-filters').removeClass('opened');
+        $('body').removeClass('hide-scroll');
     });
 
     $().fancybox({

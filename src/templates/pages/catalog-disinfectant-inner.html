@@ -15,7 +15,7 @@
 <section class="section product-hero">
     <div class="container">
         <div class="row product-hero__main">
-            <div class="col-9 offset-2">
+            <div class="col-lg-9 offset-lg-2">
 
                 <div class="goods-card goods-card--main">
                     <div class="goods-card__img">
@@ -41,17 +41,21 @@
                         </p>
 
                         <div class="goods-card__footer">
-                            <div>
-                                <select>
-                                    <option value="">3л</option>
-                                    <option value="">10л</option>
-                                </select>
+                            <div style="max-width: 200px">
+                                <div class="select" style="max-width: 70px; margin-bottom: 20px">
+                                    <div class="select__current">1л</div>
 
+                                    <ul class="select__dropdown">
+                                        <li data-price="338">1л</li>
+                                        <li data-price="500">3л</li>
+                                        <li data-price="1000">5л</li>
+                                    </ul>
+                                </div>
                                 <span class="goods-card__price">338 Р</span>
                             </div>
 
                             <div>
-                                <button type="button" class="btn">В корзину</button>
+                                <button type="button" class="btn" style="margin-bottom: 10px">В корзину</button>
                                 <div class="goods-card__meneger">
                                     Связаться с менеджером по продажам можно по горячей линии:
                                     <strong>8 800 234 53 99</strong>
@@ -272,7 +276,7 @@
         </div>
 
         <div class="row">
-            <div class="col-8 offset-2">
+            <div class="col-lg-8 offset-lg-2">
 
                 <div class="goods-list">
                     <div class="goods-card">

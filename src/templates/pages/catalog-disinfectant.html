@@ -38,64 +38,81 @@
     <main class="main-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <form action="">
-                        <section class="filter-group">
-                            <header class="filter-group__header">Области применения</header>
+                <aside class="col-md-4 main-content__sidebar">
+                    <div class="goods-filters">
+                        <button id="open-filters" class="btn btn--block filter-btn">Фильтр</button>
 
-                            <div class="filter-group__inner">
-                                <div class="checkbox-list">
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span>Медицинские учреждения</span>
-                                    </label>
+                        <form id="filter-form" action="">
+                            <div class="goods-filters__inner">
+                                <div class="filter-buttons">
+                                    <button type="button" id="hide-filters" class="btn btn--outline btn--small">Скрыть</button>
+                                    <button type="reset" class="btn btn--outline btn--small">Сброс</button>
+                                </div>
 
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span>Стоматологии</span>
-                                    </label>
+                                <div class="goods-filters__list">
+                                    <section class="filter-group">
+                                        <header class="filter-group__header">Области применения</header>
 
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span>Ветеринарные учреждения</span>
-                                    </label>
+                                        <div class="filter-group__inner">
+                                            <div class="checkbox-list">
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    <span>Медицинские учреждения</span>
+                                                </label>
 
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span>Предприятия мясной и молочной промышленности</span>
-                                    </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    <span>Стоматологии</span>
+                                                </label>
 
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span>Транспорт</span>
-                                    </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    <span>Ветеринарные учреждения</span>
+                                                </label>
 
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span>Салоны красоты, парикхмахерские</span>
-                                    </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    <span>Предприятия мясной и молочной промышленности</span>
+                                                </label>
 
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span>ДЕЗы, жилые дома, кондоминиумы</span>
-                                    </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    <span>Транспорт</span>
+                                                </label>
 
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span>Образовательные, детские учреждения</span>
-                                    </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    <span>Салоны красоты, парикхмахерские</span>
+                                                </label>
 
-                                    <label class="checkbox">
-                                        <input type="checkbox">
-                                        <span>Учреждения общественного питания</span>
-                                    </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    <span>ДЕЗы, жилые дома, кондоминиумы</span>
+                                                </label>
+
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    <span>Образовательные, детские учреждения</span>
+                                                </label>
+
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    <span>Учреждения общественного питания</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+
+                                <div class="goods-filters__submit">
+                                    <button type="submit" class="btn btn--block">Применить</button>
                                 </div>
                             </div>
-                        </section>
-                    </form>
-                </div>
+                        </form>
+                    </div>
+                </aside>
 
-                <div class="col-lg-8">
+                <div class="col-md-8 main-content__content">
                     <div class="goods-list">
                         <div class="goods-card">
                             <div class="goods-card__img">
@@ -138,7 +155,7 @@
                                     </div>
                                 </div>
 
-                                <div class="goods-card__footer">
+                                <div class="goods-card__footer align-items-center">
                                     <div>
                                         <span class="goods-card__price">338 Р</span>
                                     </div>
@@ -191,7 +208,7 @@
                                     </div>
                                 </div>
 
-                                <div class="goods-card__footer">
+                                <div class="goods-card__footer align-items-center">
                                     <div>
                                         <span class="goods-card__price">338 Р</span>
                                     </div>

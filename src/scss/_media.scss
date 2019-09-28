@@ -142,14 +142,102 @@
         }
     }
 
+    .filter-btn {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .goods-filters {
+        &__inner {
+            display: none;
+            
+        }
+    }
+
+    .goods-filters {
+        .filter-buttons {
+            display: flex;
+        }
+
+        &__submit {
+            display: block;
+        }
+    }
+
+    .goods-card {
+        flex-direction: column;
+
+        &__img {
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+
+        &__header {
+            text-align: center;
+        }
+
+        &__params {
+            flex-direction: column;
+            margin-top: -10px;
+
+            dl {
+                margin-top: 10px;
+            }
+        }
+
+        &__tare {
+            .select {
+                margin: auto;
+            }
+        }
+
+        &__footer {
+            flex-direction: column;
+
+            > div {
+                margin: 0 0 20px;
+                text-align: center;
+            }
+        }
+    }
+
+    .banner {
+        margin: 0 -15px;
+
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__text {
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        &__img {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        &__logo {
+            position: static;
+            margin: 20px auto 0;
+        }
+    }
+
     .goods-service {
         > .row {
             width: initial;
         }
 
         &__descr {
-            text-align: center;
-            padding: 0;
+            padding: 0 15px;
+        }
+
+        .btn {
+            margin: auto;
+            display: block;
         }
 
         &__title {
@@ -603,6 +691,12 @@
 @media only screen and (max-width: 480px) {
     .main-top {
         height: 70px;
+    }
+
+    .banner {
+        &__text {
+            font-size: 26px;
+        }
     }
 
     body {

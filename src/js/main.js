@@ -1,5 +1,34 @@
 $(function () {
 
+    (function () {
+        var outsideSelectClickListener = function (event) {
+            $('.select').removeClass('opened');
+            $(document).off('click', outsideSelectClickListener);
+            event.stopPropagation();
+        };
+
+        $('.select__current').on('click', function () {
+            $(this).parent().toggleClass('opened');
+
+            event.stopPropagation();
+            $(document).on('click', outsideSelectClickListener);
+            $('.select').not($(this).parent()).removeClass('opened');
+        });
+
+        $('.select__dropdown li').on('click', function () {
+            var text = $(this).text();
+            $(this).parent().siblings('.select__current').text(text);
+            $(this).closest('.select').removeClass('opened');
+            $(document).off('click', outsideSelectClickListener);
+        });
+    })();
+
+    $('.goods-card__tare .select__dropdown li').on('click', function () {
+        var price = $(this).data('price');
+
+        $(this).closest('.goods-card').find('.goods-card__price').text(price + ' Р');
+    });
+
     $().fancybox({
         selector: '.docs-slider .slick-slide:not(.slick-cloned) .doc-img'
     });
@@ -94,16 +123,16 @@ $(function () {
         $('.category-items[data-target=' + firstCategoryId + ']').addClass('active');
     }
 
-    function newsScroll(el){
-        if ( $(window).width() > 768 ){
+    function newsScroll(el) {
+        if ($(window).width() > 768) {
             var vg = $('.news__wrapper').offset().top - 30;
             var ng = vg + $('.news__wrapper').outerHeight() - $(el).outerHeight();
             var st = $(window).scrollTop();
 
-            $('.news__wrapper').css('min-height',$('.news__wrapper').find(el).outerHeight());
+            $('.news__wrapper').css('min-height', $('.news__wrapper').find(el).outerHeight());
 
-            if ( st > vg ) {
-                if ( st > ng ) {
+            if (st > vg) {
+                if (st > ng) {
                     $(el).removeClass('scroll');
                     $(el).addClass('bottom');
                 } else {
@@ -115,19 +144,19 @@ $(function () {
                 $(el).removeClass('bottom');
             }
         } else {
-            $('.news__wrapper').css('min-height','auto');
+            $('.news__wrapper').css('min-height', 'auto');
             $(el).removeClass('scroll');
             $(el).removeClass('bottom');
         }
     }
-    
+
     newsScroll('.news__nav');
 
-    $(window).on('scroll',function(){
+    $(window).on('scroll', function () {
         newsScroll('.news__nav');
     });
 
-    $(window).resize(function(){
+    $(window).resize(function () {
         newsScroll('.news__nav');
     });
 

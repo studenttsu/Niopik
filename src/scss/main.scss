@@ -1031,6 +1031,10 @@ a {
     padding: 45px 0;
 }
 
+.inner-page {
+    padding-bottom: 50px;
+}
+
 .goods-list {
     .goods-card {
         &:not(:last-child) {
@@ -1044,6 +1048,14 @@ a {
 .goods-card {
     display: flex;
     flex-wrap: wrap;
+
+    &__tare {
+        margin-bottom: 10px;
+
+        .select {
+            max-width: 70px;
+        }
+    }
 
     &__img {
         max-width: 200px;
@@ -1098,6 +1110,10 @@ a {
         font: 900 18px $futura;
         color: #8d1b43;
         text-decoration: none;
+
+        a {
+            color: #8d1b43;
+        }
     }
 
     &__params {
@@ -1139,7 +1155,7 @@ a {
     &__footer {
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-start;
+        align-items: center;
 
         > div {
             max-width: 170px;
@@ -1177,7 +1193,6 @@ a {
         .goods-card {
             &__name {
                 font-size: 21px;
-                color: #333333;
             }
 
             &__img {

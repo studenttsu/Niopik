@@ -1,0 +1,26 @@
+input[type=text],
+input[type=email],
+input[type=seach],
+input[type=number] {
+    height: 45px;
+    border: 1px solid #e1e1e1;
+    border-radius: $border-radius;
+    padding: 10px 19px;
+    line-height: 45px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    box-sizing: border-box;
+    outline: 0;
+    font-size: 14px;
+    transition: .12s;
+
+    &::placeholder {
+        color: #333;
+    }
+
+    &:focus {
+        border-color: $blue !important;
+        box-shadow: 0 0 0 1px $blue;
+    }
+}

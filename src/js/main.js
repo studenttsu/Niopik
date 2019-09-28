@@ -120,6 +120,7 @@ $(function () {
             $(el).removeClass('bottom');
         }
     }
+    
     newsScroll('.news__nav');
 
     $(window).on('scroll',function(){

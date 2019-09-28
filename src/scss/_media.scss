@@ -46,7 +46,7 @@
         }
     }
 
-    .reviews {
+    .docs {
         li {
             width: calc(100%/3 - 13.4px);
 
@@ -139,6 +139,49 @@
     .header {
         &__navbar {
             display: none;
+        }
+    }
+
+    .goods-service {
+        > .row {
+            width: initial;
+        }
+
+        &__descr {
+            text-align: center;
+            padding: 0;
+        }
+
+        &__title {
+            margin-top: 3px;
+            text-align: center;
+        }
+    }
+
+    .product-request {
+        &__title {
+            text-align: center;
+        }
+
+        &__form {
+            max-width: 480px;
+            margin: auto;
+
+            .contact-form__policy {
+                margin: auto;
+            }
+        }
+    }
+
+    .product-feature {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+
+        &__name {
+            padding-left: 0px;
+            max-width: initial;
+            margin-bottom: 10px;
         }
     }
 
@@ -441,7 +484,7 @@
         }
     }
 
-    .reviews {
+    .docs {
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -587,7 +630,7 @@
         }
     }
 
-    .reviews {
+    .docs {
         display: block;
 
         li {

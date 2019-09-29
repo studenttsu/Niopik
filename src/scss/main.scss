@@ -1723,8 +1723,7 @@ a {
     background: #f6f6f6;
     display: flex;
     min-height: 100px;
-    align-items: center;
-    padding: 10px 20px;
+    padding: 35px 20px;
     transition: transform .3s;
 
     &:hover {
@@ -2022,6 +2021,40 @@ a {
 
 .city-select + .chosen-container {
     margin-bottom: 10px;
+}
+
+.table {
+    border-radius: 3px;
+    border: 1px solid #d7d7d7;
+    border-collapse: collapse;
+    display: block;
+
+    th, td {
+        padding: 20px;
+    }
+
+    th {
+        font: 900 16px $futura;
+        background: #e5ecfe;
+
+        &:not(:last-child) {
+            border-right: 1px solid #d7d7d7;
+        }
+    }
+
+    td {
+        border: 1px solid #d7d7d7;
+    }
+
+    tbody {
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        td:first-child {
+            border-left: 0;
+        }
+    }
 }
 
 @import "footer";

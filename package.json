@@ -19,5 +19,9 @@
         "gulp-rigger": "^0.5.8",
         "gulp-sass": "^4.0.1",
         "gulp-uglify": "^3.0.1"
+    },
+    "dependencies": {
+        "chosen-js": "^1.8.7",
+        "selectric": "^1.13.0"
     }
 }

@@ -1,5 +1,10 @@
 $(function () {
 
+    $('input[type=number]').styler();
+    $('.city-select').chosen({
+        placeholder_text_single: "Город доставки",
+    });
+
     (function () {
         var outsideSelectClickListener = function (event) {
             $('.select').removeClass('opened');
@@ -29,12 +34,12 @@ $(function () {
         $(this).closest('.goods-card').find('.goods-card__price').text(price + ' Р');
     });
 
-    $('#open-filters').on('click', function() {
+    $('#open-filters').on('click', function () {
         $('.goods-filters').addClass('opened');
         $('body').addClass('hide-scroll');
     });
 
-    $('#hide-filters').on('click', function() {
+    $('#hide-filters').on('click', function () {
         $('.goods-filters').removeClass('opened');
         $('body').removeClass('hide-scroll');
     });

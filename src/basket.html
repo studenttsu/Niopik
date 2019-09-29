@@ -9,7 +9,107 @@
         //= templates/header.html
 
         <div class="wrapper__inner">
-            //= templates/pages/basket.html
+            <section class="breadcrumbs-wrap">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>Корзина</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+
+                    <div class="section__title">
+                        <h2>Оформление заказа</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="basket">
+                                <div class="basket-list">
+                                    <div class="basket-list__item">
+                                        <div>
+                                            <dl>
+                                                <dt>Продукция</dt>
+                                                <dd>АДС-521</dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <dl>
+                                                <dt>Объём</dt>
+                                                <dd>1 л</dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <input type="number" value="1" min="1" />
+                                        </div>
+                                        <div class="product-price">
+                                            300 Р
+                                        </div>
+                                    </div>
+
+                                    <div class="basket-list__item">
+                                        <div>
+                                            <dl>
+                                                <dt>Продукция</dt>
+                                                <dd>АДС-521</dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <dl>
+                                                <dt>Объём</dt>
+                                                <dd>1 л</dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <input type="number" value="1" min="1" />
+                                        </div>
+                                        <div class="product-price">
+                                            300 Р
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="basket__summary">
+                                    Итого:
+                                    <span>0 Р</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 offset-md-4">
+                            <form class="contact-form contact-form--center" style="max-width: 370px" action="">
+                                <select data-placeholder="Город доставки" class="city-select">
+                                    <option></option>
+                                    <option value="Томск">Томск</option>
+                                    <option value="Москва">Москва</option>
+                                </select>
+
+                                <!-- <input type="text" placeholder="Город доставки"> -->
+                                <input type="text" placeholder="Ваше имя">
+                                <input type="text" placeholder="Ваш телефон">
+
+                                <button class="btn" type="submit">Отправить заказ</button>
+
+                                <div class="contact-form__policy">
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span>Я принимаю условия политики обработки персональных данных</span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
             //= templates/footer.html
         </div>
     </div>

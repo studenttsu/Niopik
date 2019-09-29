@@ -30,6 +30,7 @@ gulp.task('html', () => gulp
 
 gulp.task('js', () => gulp
     .src([
+        'node_modules/chosen-js/chosen.jquery.min.js',
         'src/js/main.js',
     ])
     .pipe(concat('scripts.min.js'))
@@ -40,7 +41,10 @@ gulp.task('js', () => gulp
 
 gulp.task('scss', () => gulp
     .src('src/scss/**/*.scss')
-    .pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
+    .pipe(sass({
+        outputStyle: 'expanded',
+        includePaths: [__dirname + '/node_modules']
+    }).on("error", notify.onError()))
     .pipe(autoprefixer(['last 15 versions']))
     // .pipe(cleanCSS())
     .pipe(gulp.dest('dist/css'))

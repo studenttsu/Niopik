@@ -10,6 +10,9 @@ $(function () {
     $('.industry-type-select').chosen({
         placeholder_text_single: "Выберите тип",
     });
+    $('.area-select').chosen({
+        placeholder_text_single: "Укажите площадь",
+    });
 
     (function () {
         var outsideSelectClickListener = function (event) {

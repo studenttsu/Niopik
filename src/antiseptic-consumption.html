@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+//= templates/head.html
+
+<body>
+
+    <div class="wrapper">
+        //= templates/header.html
+
+        <div class="wrapper__inner">
+            <section class="breadcrumbs-wrap">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Подбор дезсредства</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="application">
+                <div class="container">
+                    <div class="banner" style="background-image: url('img/banner-pattern-6.png'); background-color: #7663ab;">
+                        <div class="banner__inner">
+                            <div class="banner__text text-pink">Рассчитайте расход антисептика<br> <span>для строительных материалов</span></div>
+
+                            <div class="banner__img">
+                                <img src="img/for-banner-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section selection-section">
+                <div class="container">
+                    <div class="selection">
+                        <div class="selection__item">
+                            <div class="selection__item-number"><span>1</span></div>
+                            <div class="selection__item-title">Укажите площадь обрабатываемой повехрности (м2)</div>
+                            <form class="selection__item-form-small">
+                                <select data-placeholder="Укажите площадь" class="area-select">
+                                    <option></option>
+                                    <option value="150">150</option>
+                                    <option value="200">200</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="selection__item">
+                            <div class="selection__item-number"><span>2</span></div>
+                            <div class="selection__item-title">Укажите степень поражения поверхности</div>
+                            <form>
+                                <ul class="checkbox-list flex-3">
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="radio" name="stepen" checked>
+                                            <span>Высокая</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="radio" name="stepen">
+                                            <span>Средняя</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="radio" name="stepen">
+                                            <span>Профилактика</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="selection__item">
+                            <div class="selection__item-number"><span>3</span></div>
+                            <div class="selection__item-title">Расход</div>
+                            <ul class="selection__item-list">
+                                <li>Количество антисептика (л.): 2</li>
+                                <li>Количество воды для разбавления (л.): 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="selection-fix">
+                    <div class="selection-fix-wrap">
+                        <div class="selection-fix-text">
+                            <p>Рассчитать сколько вам потребуется литров антисептика "Картоцид-компаунд" можно с помощью калькулятора.Расход действителен для применения антисептика для любых неметаллических строительных материалов: дерева, камня, кирпича, бетона и т.д.</p>
+                            <p><b>Внимание!</b> При лечении строительных материалов для достижения гарантированного эффекта, разработчик рекомендует провести две обработки с промежуточной тщательной сушкой обрабатываемой поверхности.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--blue">
+                <div class="container">
+
+                    <div class="section__title">
+                        <h2>Выберите нужный раздел</h2>
+                    </div>
+
+                    <div class="section__inner">
+                        <div class="row goods-section-wrap">
+                            <div class="col-md-6">
+                                <a class="goods-section">
+                                    <div class="goods-section__img">
+                                        <img src="img/balloon2.png" alt="">
+                                    </div>
+                                    <span class="goods-section__name">Дезинфицирующие средства</span>
+                                </a>
+                            </div>
+
+                            <div class="col-md-6">
+                                <a class="goods-section">
+                                    <div class="goods-section__img">
+                                        <img src="img/balloon1.jpg" alt="">
+                                    </div>
+                                    <span class="goods-section__name">Строительные антисептики </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            //= templates/footer.html
+        </div>
+    </div>
+
+    //= templates/bottom.html
+
+</body>
+
+</html>

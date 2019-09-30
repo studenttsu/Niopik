@@ -1,1 +1,0 @@
-# Niopik [![Build Status](https://travis-ci.com/studenttsu/Niopik.svg?branch=master)](https://travis-ci.com/studenttsu/Niopik)

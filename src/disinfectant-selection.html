@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+//= templates/head.html
+
+<body>
+
+    <div class="wrapper">
+        //= templates/header.html
+
+        <div class="wrapper__inner">
+            <section class="breadcrumbs-wrap">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Подбор дезсредства</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="application">
+                <div class="container">
+                    <div class="banner" style="background-image: url('img/banner-pattern-4.png'); background-color: #94c7e1;">
+                        <div class="banner__inner">
+                            <div class="banner__text text-pink">Как подобрать<br> дезинфицирующее средство?<br> <span>Заполните пункты, получите ответ</span></div>
+
+                            <div class="banner__img">
+                                <img src="img/for-banner.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section selection-section">
+                <div class="container">
+                    <div class="selection">
+                        <div class="selection__item">
+                            <div class="selection__item-number"><span>1</span></div>
+                            <div class="selection__item-title">Выберите отрасль</div>
+                            <form class="selection__item-form-small">
+                                <select data-placeholder="Выберите отрасль" class="industry-select">
+                                    <option></option>
+                                    <option value="Медицина">Медицина</option>
+                                    <option value="Промышленность">Промышленность</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="selection__item">
+                            <div class="selection__item-number"><span>2</span></div>
+                            <div class="selection__item-title">Выберите тип</div>
+                            <form class="selection__item-form-small">
+                                <select data-placeholder="Выберите тип" class="industry-type-select">
+                                    <option></option>
+                                    <option value="Стоматологическая клиника">Стоматологическая клиника</option>
+                                    <option value="Офтальмологическая клиника">Офтальмологическая клиника</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="selection__item">
+                            <div class="selection__item-number"><span>3</span></div>
+                            <div class="selection__item-title">Микробиология</div>
+                            <form>
+                                <ul class="checkbox-list flex-3">
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="microbiology" checked>
+                                            <span>Бактерии</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="microbiology">
+                                            <span>Вирусы</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="microbiology">
+                                            <span>Грибковые инфекции</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="microbiology">
+                                            <span>Микобактерии туберкулеза</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="microbiology">
+                                            <span>Особо опасные инфекции</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="microbiology">
+                                            <span>Споры</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="microbiology">
+                                            <span>Стерилизация</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="selection__item">
+                            <div class="selection__item-number"><span>4</span></div>
+                            <div class="selection__item-title">Применение</div>
+                            <form>
+                                <ul class="checkbox-list">
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="application" checked>
+                                            <span>Дезинфекция ИМН, включая хирургические и стоматологические инструменты</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="application">
+                                            <span>Дезинфекция совмещенная с предстерилизационной очисткой ИМН, включая хирургические и стоматологические инструменты</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="application">
+                                            <span>Дезинфекция ИМН с применением ультразвуковых установок</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="application">
+                                            <span>Дезинфекция совмещенная с предстерилизационной очисткой ИМН с применением ультразвуковых установок</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="application">
+                                            <span>Предстерилизационная очистка изделий медицинского назначения</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="application">
+                                            <span>Предстерилизационная очистка ИМН, включая хирургические и стоматологические инструменты</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="application">
+                                            <span>Предстерилизационная очистка совмещенная и не совмещенная с дезинфекцией ИМН с применением ультразвуковых установок</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="selection-fix">
+                    <div class="selection-fix-wrap">
+                        <div class="selection-fix-title">Подходящие средства</div>
+                        <ul class="selection-fix-list">
+                            <li><a href="#">АДС-521</a></li>
+                            <li><a href="#">Акваминол Форте</a></li>
+                            <li><a href="#">Акваминол</a></li>
+                            <li><a href="#">Аламинол</a></li>
+                            <li><a href="#">Аламинол Плюс</a></li>
+                            <li><a href="#">Альпинол</a></li>
+                            <li><a href="#">Бианол</a></li>
+                            <li><a href="#">Макси-Дез</a></li>
+                            <li><a href="#">Макси-Дез М</a></li>
+                            <li><a href="#">Макси-Септ Аква</a></li>
+                            <li><a href="#">Макси-Стерил</a></li>
+                            <li><a href="#">Акваминол Спрей</a></li>
+                            <li><a href="#">Макси-Септ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--blue">
+                <div class="container">
+
+                    <div class="section__title">
+                        <h2>Выберите нужный раздел</h2>
+                    </div>
+
+                    <div class="section__inner">
+                        <div class="row goods-section-wrap">
+                            <div class="col-md-6">
+                                <a class="goods-section">
+                                    <div class="goods-section__img">
+                                        <img src="img/balloon2.png" alt="">
+                                    </div>
+                                    <span class="goods-section__name">Дезинфицирующие средства</span>
+                                </a>
+                            </div>
+
+                            <div class="col-md-6">
+                                <a class="goods-section">
+                                    <div class="goods-section__img">
+                                        <img src="img/balloon1.jpg" alt="">
+                                    </div>
+                                    <span class="goods-section__name">Строительные антисептики </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            //= templates/footer.html
+        </div>
+    </div>
+
+    //= templates/bottom.html
+
+</body>
+
+</html>

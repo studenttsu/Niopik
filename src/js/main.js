@@ -100,9 +100,9 @@ $(function () {
         $('body').toggleClass('hide-scroll');
     });
 
-    $('#mobile-menu .drop .mobile-menu__arrow-btn').on('click', function () {
-        $(this).parent().toggleClass('active');
-        $(this).parent().find('.mobile-menu__sub-nav').slideToggle();
+    $('#mobile-menu .drop').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).find('.mobile-menu__sub-nav').slideToggle();
     });
 
     var outsideClickListener = function (event) {

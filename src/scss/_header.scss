@@ -324,16 +324,20 @@
 
     .drop {        
         position: relative;
+        cursor: pointer;
 
         > a {
             font-weight: 300;
             color: #333333;
             text-decoration: none;
-            display: block;
+            display: inline-block;
             line-height: 1;
-            padding: 9px 14px;
             outline: 0;
             cursor: pointer;
+
+            &:hover {
+                background: transparent;
+            }
         }
 
         &.active {

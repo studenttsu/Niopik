@@ -138,6 +138,19 @@
     }
 }
 
+.fancybox-close-small {
+    color: #d9e0ec !important;
+    opacity: 1;
+
+    svg {
+        transform: scale(1.3);
+    }
+
+    &:hover {
+        color: darken(#d9e0ec, 8%);
+    }
+}
+
 .jq-number {
     padding: 0 27px;
     background: #fff;

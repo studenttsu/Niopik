@@ -31,6 +31,16 @@
     &--link {
         background: transparent;
         color: $blue;
+
+        &:hover {
+            color: darken($blue, 8%) !important;
+            background: transparent !important;
+        }
+    
+        &:active {
+            color: darken($blue, 10%) !important;
+            background: transparent !important;
+        }
     }
 
     &:hover {

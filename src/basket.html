@@ -44,11 +44,16 @@
                                                 <dd>1 л</dd>
                                             </dl>
                                         </div>
-                                        <div>
-                                            <input type="number" value="1" min="1" />
+                                        <div class="basket-list__control">
+                                            <input type="number" pattern="[0-9]*" value="1" min="0" />
                                         </div>
-                                        <div class="product-price">
-                                            300 Р
+                                        <div class="d-flex">
+                                            <span class="product-price">300 Р</span>
+                                            <button class="basket-list__remove">
+                                                <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+                                                    <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -65,11 +70,16 @@
                                                 <dd>1 л</dd>
                                             </dl>
                                         </div>
-                                        <div>
-                                            <input type="number" value="1" min="1" />
+                                        <div class="basket-list__control">
+                                            <input type="number" pattern="[0-9]*" value="1" min="0" />
                                         </div>
-                                        <div class="product-price">
-                                            300 Р
+                                        <div class="d-flex">
+                                            <span class="product-price">300 Р</span>
+                                            <button class="basket-list__remove">
+                                                <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+                                                    <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +110,9 @@
                                 <div class="contact-form__policy">
                                     <label class="checkbox">
                                         <input type="checkbox" checked>
-                                        <span>Я принимаю условия политики обработки персональных данных</span>
+                                        <span>Я принимаю условия
+                                            <a href="#" target="_blank">политики обработки персональных данных</a>
+                                        </span>
                                     </label>
                                 </div>
                             </form>

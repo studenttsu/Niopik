@@ -114,11 +114,11 @@ a {
     transition: color $easing-time ease-out;
 
     &:hover {
-        color: darken($blue, 5%)
+        color: darken($blue, 8%)
     }
 
     &:active {
-        color: darken($blue, 8%)
+        color: darken($blue, 10%)
     }
 }
 

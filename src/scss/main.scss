@@ -233,6 +233,7 @@
     
     &__icon {
         @extend %circle-icon;
+        margin-right: 0 !important;
         margin-bottom: 30px;
     }
 
@@ -424,8 +425,9 @@
 
 .about {
     h1.text {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
+        font-family: $futura-book;
         margin: 0;
     }
 
@@ -962,6 +964,10 @@
 
         a {
             color: #8d1b43;
+
+            &:hover {
+                color: lighten(#8d1b43, 13%);
+            }
         }
     }
 
@@ -1680,6 +1686,37 @@
 
         .product-price {
             font: 900 18px $futura;
+        }
+    }
+
+    &__remove {
+        background: transparent;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+        transform: scale(0.8);
+        margin-left: 10px;
+        color: darken(#d9e0ec, 10%);
+        transition: color .2s;
+
+        svg {
+            display: block;
+            height: 100%;
+            overflow: visible;
+            position: relative;
+            width: 100%;
+
+            path {
+                fill: currentColor;
+                stroke-width: 0;
+            }
+        }
+
+        &:hover {
+            color: darken(#d9e0ec, 18%);
         }
     }
 }

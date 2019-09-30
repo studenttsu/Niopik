@@ -8,6 +8,13 @@
             }
         }
     }
+
+    .selection {
+        padding-right: 380px;
+    }
+    .selection-fix {
+        min-width: 360px;
+    }
 }
 
 /* Large Devices, Wide Screens */
@@ -57,6 +64,15 @@
             &:nth-child(3n) {
                 margin-right: 0;
             }
+        }
+    }
+
+    .checkbox-list.flex-3 {
+        justify-content: space-between;
+
+        li {
+            width: calc(50% - 10px);
+            margin-right: 0;
         }
     }
 }
@@ -695,6 +711,43 @@
             }
         }
     }
+
+    .selection {
+        padding-right: 0;
+
+        &__item {
+            padding-left: 50px;
+            margin-bottom: 30px;
+
+            &-title {
+                font-size: 18px;
+            }
+
+            &-number {
+                width: 40px;
+                height: 40px;
+                top: -10px;
+            }
+        }
+    }
+
+    .selection-fix {
+        width: 100%;
+        min-width: auto;
+        margin: 40px auto 0;
+        position: static;
+        padding: 0 10px;
+
+        &-wrap {
+            margin: 0 auto;
+            padding: 20px 30px;
+
+            &:before {
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -818,6 +871,34 @@
                 width: 100%;
                 margin: 0 auto 10px !important;
             }
+        }
+    }
+
+    .selection__item {
+        padding-left: 0;
+        text-align: center;
+
+        &-number {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin: 0 auto 15px;
+        }
+
+        form {
+            margin: 0 auto;
+        }
+
+        .checkbox-list {
+            text-align: left;
+        }
+    }
+
+    .checkbox-list.flex-3 {
+        display: block;
+
+        li {
+            width: 100%;
         }
     }
 }

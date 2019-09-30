@@ -9,8 +9,26 @@ const del = require('del');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const autoprefixer = require('gulp-autoprefixer');
-const notify = require("gulp-notify");
-const rigger = require("gulp-rigger");
+const notify = require('gulp-notify');
+const rigger = require('gulp-rigger');
+const version = require('gulp-version-number');
+
+const versionConfig = {
+    'value': '%MDS%',
+    'append': {
+        'key': 'v',
+        'to': [
+            {
+                type: 'js',
+                files: ['scripts.min.js']
+            },
+            {
+                type: 'css',
+                files: ['main.css']
+            }
+        ],
+    },
+};
 
 gulp.task('browser-sync', () => {
     browserSync({
@@ -24,6 +42,7 @@ gulp.task('browser-sync', () => {
 gulp.task('html', () => gulp
     .src('src/*.html')
     .pipe(rigger())
+    .pipe(version(versionConfig))
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({ stream: true }))
 );
@@ -37,7 +56,7 @@ gulp.task('js', () => gulp
         'src/js/main.js',
     ])
     .pipe(concat('scripts.min.js'))
-    // .pipe(uglify()) // Минимизировать весь js (на выбор)
+    .pipe(uglify()) // Минимизировать весь js (на выбор)
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({ stream: true }))
 );
@@ -47,7 +66,7 @@ gulp.task('scss', () => gulp
     .pipe(sass({
         outputStyle: 'expanded',
         includePaths: [__dirname + '/node_modules']
-    }).on("error", notify.onError()))
+    }).on('error', notify.onError()))
     .pipe(autoprefixer(['last 15 versions']))
     .pipe(cleanCSS())
     .pipe(gulp.dest('dist/css'))

@@ -1,0 +1,166 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__inner {
+        flex: 1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: #000000;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+        
+        &.overlay {
+            position: relative;
+            
+            &:after {
+                transition: opacity .1s ease-out;
+                transition-delay: .05s;
+                opacity: 0.6;
+                visibility: visible;
+            }
+        }    
+    }
+}
+
+.main-content {
+    padding: 45px 0;
+}
+
+.inner-page {
+    padding-bottom: 50px;
+}
+
+.section {
+    padding: 50px 0;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 45px;
+
+        h2 {
+            font-size: 36px;
+            font-family: $futura; font-weight: 900;
+            margin: 0;
+        }
+    }
+
+    &--blue {
+        background-color: #e5ecfe;
+    }
+}
+
+.container {
+    max-width: 1230px;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        position: relative;
+        padding-left: 16px;
+        line-height: 1;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background-color: #e9abcb;
+            border-radius: 50%;
+            left: 0;
+            top: 6px;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font: 16px $futura-book;
+    color: #333;
+    min-width: 320px;
+
+    &.hide-scroll {
+        overflow: hidden;
+    }
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+    transition: color $easing-time ease-out;
+
+    &:hover {
+        color: darken($blue, 5%)
+    }
+
+    &:active {
+        color: darken($blue, 8%)
+    }
+}
+
+.pink {
+    color: $pink-color;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.h1 {
+    font: 900 36px $futura;
+    margin: 30px 0;
+    line-height: 1;
+}
+
+.h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.h1 + .h2 {
+    margin-top: -15px;
+}
+
+.table-responsive {
+    border-radius: 3px;
+}
+
+.modal {
+    border-radius: 3px;
+
+    &__header {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font: 900 24px $futura;
+    }
+
+    &__subtitle {
+        font-size: 21px;
+    }
+}

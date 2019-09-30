@@ -30,11 +30,14 @@ gulp.task('html', () => gulp
 
 gulp.task('js', () => gulp
     .src([
+        'node_modules/jquery/dist/jquery.min.js',
         'node_modules/chosen-js/chosen.jquery.min.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
         'src/js/main.js',
     ])
     .pipe(concat('scripts.min.js'))
-    .pipe(uglify()) // Минимизировать весь js (на выбор)
+    // .pipe(uglify()) // Минимизировать весь js (на выбор)
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({ stream: true }))
 );
@@ -46,7 +49,7 @@ gulp.task('scss', () => gulp
         includePaths: [__dirname + '/node_modules']
     }).on("error", notify.onError()))
     .pipe(autoprefixer(['last 15 versions']))
-    // .pipe(cleanCSS())
+    .pipe(cleanCSS())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream())
 );
@@ -54,7 +57,7 @@ gulp.task('scss', () => gulp
 gulp.task('watch', ['removedist', 'html', 'scss', 'imagemin', 'fonts', 'js', 'browser-sync'], () => {
     gulp.watch('src/scss/**/*.scss', ['scss']);
     gulp.watch('img/**/*', ['imagemin']);
-    gulp.watch(['libs/**/*.js', 'src/js/main.js'], ['js']);
+    gulp.watch(['src/js/main.js'], ['js']);
     gulp.watch(['src/**/*.html'], ['html', browserSync.reload]);
 });
 

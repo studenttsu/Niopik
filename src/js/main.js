@@ -1,15 +1,27 @@
 $(function () {
 
+    var cities = ['Томск', 'Москва'].map(x => ({ value: x, data: x }));
+
+    jQuery.validator.addMethod("phoneValidator", function (value, element) {
+        return value.length > 0 ? /\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}/g.test(value) : true;
+    });
+
+    jQuery.validator.addMethod("cityValidator", function (value, element) {
+        return cities.findIndex(x => x.value.toLocaleLowerCase() === value.toLocaleLowerCase()) !== -1;
+    });
+
     $('input.form-control').floatingLabel();
+
     $('input.phone-input').inputmask({
         mask: '+7 (999) 999-99-99'
     });
 
     $('input[type=number]').styler();
-
-    $('.city-select').chosen({
-        placeholder_text_single: "Город доставки",
-        no_results_text: 'Город не найден, проверьте название'
+    
+    $('.city-select').autocomplete({
+        lookup: cities,
+        showNoSuggestionNotice: true,
+        noSuggestionNotice: 'Город не найден, проверьте название'
     });
 
     $('.industry-select').chosen({
@@ -22,14 +34,17 @@ $(function () {
         placeholder_text_single: "Укажите площадь",
     });
 
-    $('form.contact-form').each(function () {
+    $('form.contact-form:not(#basket-order)').each(function () {
         $(this).validate({
             rules: {
                 name: 'required',
-                phone: 'required',
+                phone: {
+                    required: true,
+                    phoneValidator: true
+                },
                 policy: 'required'
             },
-            errorPlacement: function(error, element) {},
+            errorPlacement: function (error, element) { },
             submitHandler: function (form) {
                 form.submit();
             }
@@ -38,12 +53,18 @@ $(function () {
 
     $('form#basket-order').validate({
         rules: {
-            city: 'required',
+            city: {
+                required: true,
+                cityValidator: true
+            },
             name: 'required',
-            phone: 'required',
+            phone: {
+                required: true,
+                phoneValidator: true
+            },
             policy: 'required'
         },
-        errorPlacement: function(error, element) {},
+        errorPlacement: function (error, element) { },
         submitHandler: function (form) {
             form.submit();
         }

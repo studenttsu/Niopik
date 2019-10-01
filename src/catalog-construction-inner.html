@@ -134,7 +134,7 @@
                                             <th width="250">Строительный материал</th>
                                         </tr>
                                     </thead>
-    
+
                                     <tbody>
                                         <tr>
                                             <td>Спектр биоцидного действия</td>
@@ -347,15 +347,18 @@
 
                                 <div class="product-request__form">
                                     <form class="contact-form" action="">
-                                        <input type="text" name="name" placeholder="Ваше имя">
-                                        <input type="text" name="phone" placeholder="Ваш телефон">
+                                        <input class="form-control" name="name" type="text" placeholder="Иван" label="Ваше имя">
+                                        <input class="form-control phone-input" pattern="+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" data-focused-always="true" value="+7 ("
+                                            name="phone" type="tel" placeholder="+7 (921) 123-45-67" label="Ваш телефон">
 
                                         <button class="btn" type="submit">Отправить заявку</button>
 
                                         <div class="contact-form__policy">
                                             <label class="checkbox">
                                                 <input name="policy" type="checkbox" checked>
-                                                <span>Я принимаю условия <a href="#" target="_blank">политики обработки персональных данных</a></span>
+                                                <span>Я принимаю условия
+                                                    <a href="#" target="_blank">политики обработки персональных данных</a>
+                                                </span>
                                             </label>
                                         </div>
                                     </form>

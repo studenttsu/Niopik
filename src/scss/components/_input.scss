@@ -8,6 +8,7 @@ input:-webkit-autofill:active  {
 input[type=text],
 input[type=email],
 input[type=seach],
+input[type=tel],
 input[type=number] {
     height: 45px;
     border: 1px solid #e1e1e1;
@@ -46,7 +47,6 @@ input[type=number] {
             &__label {
                 transform: translate(0, -10px);
                 font-size: 12px;
-                opacity: 0.8;
             }
 
             &__input {

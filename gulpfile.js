@@ -56,6 +56,7 @@ gulp.task('js', () => gulp
         'node_modules/chosen-js/chosen.jquery.min.js',
         'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+        'src/js/jquery.autocomplete.min.js',
         'src/js/floatingLabel.js',
         'src/js/main.js',
     ])

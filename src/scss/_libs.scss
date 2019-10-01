@@ -7,6 +7,41 @@
 @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @import "../../node_modules/float-labels.js/dist/float-labels.min.css";
 
+.autocomplete-suggestions {
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    width: 100%;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.autocomplete-suggestion { 
+    padding: 6px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 1;
+    transition: .15s;
+    white-space: nowrap; overflow: hidden; 
+
+    &:hover {
+        background-color: darken(#ebebeb, 3%);
+    }
+}
+
+.autocomplete-no-suggestion {
+    padding: 6px 15px;
+    font-size: 14px;
+}
+
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
 
 .slider {
     .slick-prev,

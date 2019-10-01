@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+//= templates/head.html
+
+<body>
+
+    <div class="wrapper">
+        //= templates/header.html
+
+        <div class="wrapper__inner">
+            <section class="breadcrumbs-wrap">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Сотрудничество</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="cooperation">
+                <div class="container">
+                    <div class="cooperation-wrap">
+                        <div class="cooperation-text">
+                            <h2>Пришлагаем к сотрудничеству<br> <span>оптовых покупателей и дилеров</span></h2>
+                            <a href="#" class="btn">Получить условия</a>
+                        </div>
+                        <div class="cooperation-img">
+                            <img src="img/for-banner-4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="section__title">
+                        <h2>Преимущества сотрудничества</h2>
+                    </div>
+
+                    <ul class="cooperation-list">
+                        <li>
+                            <div class="wrap">
+                                <div class="cooperation-list-icon"><img src="img/icons/coop-ico-1.png" alt=""></div>
+                                <div class="cooperation-list-text">Прямые поставки от&nbsp;производителя</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <div class="cooperation-list-icon"><img src="img/icons/coop-ico-2.png" alt=""></div>
+                                <div class="cooperation-list-text">Востребованная продукция, со&nbsp;всеми сертификатами</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <div class="cooperation-list-icon"><img src="img/icons/coop-ico-3.png" alt=""></div>
+                                <div class="cooperation-list-text">Отлаженная система поставок продукции</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <div class="cooperation-list-icon"><img src="img/icons/coop-ico-4.png" alt=""></div>
+                                <div class="cooperation-list-text">Гибкая система скидок</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <div class="cooperation-list-icon"><img src="img/icons/coop-ico-5.png" alt=""></div>
+                                <div class="cooperation-list-text">Оперативное подключение к&nbsp;новым разработкам центра</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrap">
+                                <div class="cooperation-list-icon"><img src="img/icons/coop-ico-6.png" alt=""></div>
+                                <div class="cooperation-list-text">Поддержка дилеров рекламными материалами</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="section__title">
+                        <h2>Получите условия сотрудничества</h2>
+                    </div>
+
+                    <form class="contact-form contact-form--center" style="max-width: 370px">
+                        <div class="checkbox-title">Какая информация необходима?</div>
+                        <ul class="checkbox-list flex">
+                            <li>
+                                <label class="checkbox">
+                                    <input type="radio" name="info-type" checked>
+                                    <span>Оптовый прайс-лист</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox">
+                                    <input type="radio" name="info-type">
+                                    <span>Дилерские условия</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <select data-placeholder="Город доставки" class="city-select">
+                            <option></option>
+                            <option value="Томск">Томск</option>
+                            <option value="Москва">Москва</option>
+                        </select>
+                        <input type="text" placeholder="Ваше имя">
+                        <input type="text" placeholder="Ваше email">
+                        <input type="text" placeholder="Ваш телефон">
+
+                        <button class="btn" type="submit">Отправить заказ</button>
+
+                        <div class="contact-form__policy">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span>Я принимаю условия политики обработки персональных данных</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="section section--blue">
+                <div class="container">
+
+                    <div class="section__title">
+                        <h2>Выберите нужный раздел</h2>
+                    </div>
+
+                    <div class="section__inner">
+                        <div class="row goods-section-wrap">
+                            <div class="col-md-6">
+                                <a class="goods-section">
+                                    <div class="goods-section__img">
+                                        <img src="img/balloon2.png" alt="">
+                                    </div>
+                                    <span class="goods-section__name">Дезинфицирующие средства</span>
+                                </a>
+                            </div>
+
+                            <div class="col-md-6">
+                                <a class="goods-section">
+                                    <div class="goods-section__img">
+                                        <img src="img/balloon1.jpg" alt="">
+                                    </div>
+                                    <span class="goods-section__name">Строительные антисептики </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            //= templates/footer.html
+        </div>
+    </div>
+
+    //= templates/bottom.html
+
+</body>
+
+</html>

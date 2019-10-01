@@ -32,6 +32,13 @@
                 wrap.addClass('focus');
             }
 
+            el.on('input', () => {
+                console.log(el.val())
+                if (el.val() !== '') {
+                    wrap.addClass('focus');
+                }
+            });
+
             el.focus(() => wrap.addClass('focus'));
             el.blur(() => {
                 if (el.val() === '' && !isAlwaysFocused) {

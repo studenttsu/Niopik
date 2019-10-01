@@ -11,7 +11,6 @@ branches:
 
 install:
   - npm install
-  - bower install
 
 script:
   - npm run build

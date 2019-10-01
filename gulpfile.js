@@ -9,8 +9,26 @@ const del = require('del');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const autoprefixer = require('gulp-autoprefixer');
-const notify = require("gulp-notify");
-const rigger = require("gulp-rigger");
+const notify = require('gulp-notify');
+const rigger = require('gulp-rigger');
+const version = require('gulp-version-number');
+
+const versionConfig = {
+    'value': '%MDS%',
+    'append': {
+        'key': 'v',
+        'to': [
+            {
+                type: 'js',
+                files: ['scripts.min.js']
+            },
+            {
+                type: 'css',
+                files: ['main.css']
+            }
+        ],
+    },
+};
 
 gulp.task('browser-sync', () => {
     browserSync({
@@ -24,13 +42,17 @@ gulp.task('browser-sync', () => {
 gulp.task('html', () => gulp
     .src('src/*.html')
     .pipe(rigger())
+    .pipe(version(versionConfig))
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({ stream: true }))
 );
 
 gulp.task('js', () => gulp
     .src([
+        'node_modules/jquery/dist/jquery.min.js',
         'node_modules/chosen-js/chosen.jquery.min.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
         'src/js/main.js',
     ])
     .pipe(concat('scripts.min.js'))
@@ -44,9 +66,9 @@ gulp.task('scss', () => gulp
     .pipe(sass({
         outputStyle: 'expanded',
         includePaths: [__dirname + '/node_modules']
-    }).on("error", notify.onError()))
+    }).on('error', notify.onError()))
     .pipe(autoprefixer(['last 15 versions']))
-    // .pipe(cleanCSS())
+    .pipe(cleanCSS())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream())
 );
@@ -54,7 +76,7 @@ gulp.task('scss', () => gulp
 gulp.task('watch', ['removedist', 'html', 'scss', 'imagemin', 'fonts', 'js', 'browser-sync'], () => {
     gulp.watch('src/scss/**/*.scss', ['scss']);
     gulp.watch('img/**/*', ['imagemin']);
-    gulp.watch(['libs/**/*.js', 'src/js/main.js'], ['js']);
+    gulp.watch(['src/js/main.js'], ['js']);
     gulp.watch(['src/**/*.html'], ['html', browserSync.reload]);
 });
 

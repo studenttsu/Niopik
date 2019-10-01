@@ -18,10 +18,17 @@
         "gulp-rename": "^1.4.0",
         "gulp-rigger": "^0.5.8",
         "gulp-sass": "^4.0.1",
-        "gulp-uglify": "^3.0.1"
+        "gulp-uglify": "^3.0.1",
+        "gulp-version-number": "^0.2.4"
     },
     "dependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
+        "bootstrap": "^4.3.1",
         "chosen-js": "^1.8.7",
-        "selectric": "^1.13.0"
+        "jquery": "^3.4.1",
+        "jquery-validation": "^1.19.1",
+        "normalize.css": "^8.0.1",
+        "selectric": "^1.13.0",
+        "slick-carousel": "^1.8.1"
     }
 }

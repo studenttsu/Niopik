@@ -8,3 +8,27 @@ $futura-book: 'Futura PT Book', sans-serif;
 // colors
 $pink-color: #d541b6;
 $blue: #265fbf;
+
+%reset-list-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+%circle-icon {
+    border: 5px solid $blue;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 18px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

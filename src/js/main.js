@@ -1,8 +1,10 @@
 $(function () {
 
     $('input[type=number]').styler();
+
     $('.city-select').chosen({
         placeholder_text_single: "Город доставки",
+        no_results_text: 'Город не найден, проверьте название'
     });
     $('.industry-select').chosen({
         placeholder_text_single: "Выберите отрасль",
@@ -12,6 +14,18 @@ $(function () {
     });
     $('.area-select').chosen({
         placeholder_text_single: "Укажите площадь",
+    });
+
+    $('.basket-list__remove').on('click', function() {
+        $(this).closest('.basket-list__item').remove();
+    });
+
+    $('.basket-list__control input').on('change', function(event) {
+        var value = event.target.value;
+
+        if (value == 0) {
+            $(this).closest('.basket-list__item').remove();
+        }
     });
 
     (function () {
@@ -86,9 +100,9 @@ $(function () {
         $('body').toggleClass('hide-scroll');
     });
 
-    $('#mobile-menu .drop .mobile-menu__arrow-btn').on('click', function () {
-        $(this).parent().toggleClass('active');
-        $(this).parent().find('.mobile-menu__sub-nav').slideToggle();
+    $('#mobile-menu .drop').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).find('.mobile-menu__sub-nav').slideToggle();
     });
 
     var outsideClickListener = function (event) {

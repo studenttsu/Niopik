@@ -5,7 +5,6 @@
         "build": "gulp build"
     },
     "devDependencies": {
-        "bower": "^1.8.4",
         "browser-sync": "^2.24.6",
         "del": "^3.0.0",
         "gulp": "^3.9.1",
@@ -25,6 +24,8 @@
         "@fancyapps/fancybox": "^3.5.7",
         "bootstrap": "^4.3.1",
         "chosen-js": "^1.8.7",
+        "float-labels.js": "^3.3.9",
+        "inputmask": "^4.0.9",
         "jquery": "^3.4.1",
         "jquery-validation": "^1.19.1",
         "normalize.css": "^8.0.1",

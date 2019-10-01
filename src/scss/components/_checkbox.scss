@@ -6,6 +6,12 @@
         position: absolute;
         visibility: hidden;
 
+        &.error {
+            & + span:before {
+                border-color: #dd5656;
+            }
+        }
+
         &:checked + span {
             &:before {
                 background-color: $blue;

@@ -50,13 +50,17 @@ gulp.task('html', () => gulp
 gulp.task('js', () => gulp
     .src([
         'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/inputmask/dist/jquery.inputmask.bundle.js',
+        'node_modules/jquery-validation/dist/jquery.validate.min.js',
+        'node_modules/float-labels.js/dist/float-labels.min.js',
         'node_modules/chosen-js/chosen.jquery.min.js',
         'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+        'src/js/floatingLabel.js',
         'src/js/main.js',
     ])
     .pipe(concat('scripts.min.js'))
-    .pipe(uglify()) // Минимизировать весь js (на выбор)
+    // .pipe(uglify()) // Минимизировать весь js (на выбор)
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.reload({ stream: true }))
 );
@@ -76,7 +80,7 @@ gulp.task('scss', () => gulp
 gulp.task('watch', ['removedist', 'html', 'scss', 'imagemin', 'fonts', 'js', 'browser-sync'], () => {
     gulp.watch('src/scss/**/*.scss', ['scss']);
     gulp.watch('img/**/*', ['imagemin']);
-    gulp.watch(['src/js/main.js'], ['js']);
+    gulp.watch(['src/js/**/*.js'], ['js', browserSync.reload]);
     gulp.watch(['src/**/*.html'], ['html', browserSync.reload]);
 });
 

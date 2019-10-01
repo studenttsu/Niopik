@@ -1,11 +1,17 @@
 $(function () {
 
+    $('input.form-control').floatingLabel();
+    $('input.phone-input').inputmask({
+        mask: '+7 (999) 999-99-99'
+    });
+
     $('input[type=number]').styler();
 
     $('.city-select').chosen({
         placeholder_text_single: "Город доставки",
         no_results_text: 'Город не найден, проверьте название'
     });
+
     $('.industry-select').chosen({
         placeholder_text_single: "Выберите отрасль",
     });
@@ -16,11 +22,44 @@ $(function () {
         placeholder_text_single: "Укажите площадь",
     });
 
-    $('.basket-list__remove').on('click', function() {
+    $('form.contact-form').each(function () {
+        $(this).validate({
+            rules: {
+                name: 'required',
+                phone: 'required',
+                policy: 'required'
+            },
+            errorPlacement: function(error, element) {},
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+    });
+
+    $('form#basket-order').validate({
+        rules: {
+            city: 'required',
+            name: 'required',
+            phone: 'required',
+            policy: 'required'
+        },
+        errorPlacement: function(error, element) {},
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
+
+    $('input[type=checkbox]').on('input', function (event) {
+        if (event.target.checked && $(this).next().hasClass('error')) {
+            $(this).next().remove();
+        }
+    });
+
+    $('.basket-list__remove').on('click', function () {
         $(this).closest('.basket-list__item').remove();
     });
 
-    $('.basket-list__control input').on('change', function(event) {
+    $('.basket-list__control input').on('change', function (event) {
         var value = event.target.value;
 
         if (value == 0) {
@@ -162,7 +201,7 @@ $(function () {
     }
 
     function newsScroll(el) {
-        if ( $('.wrapper__inner').find(el).length ){
+        if ($('.wrapper__inner').find(el).length) {
             if ($(window).width() > 768) {
                 var vg = $('.news__wrapper').offset().top - 30;
                 var ng = vg + $('.news__wrapper').outerHeight() - $(el).outerHeight();
@@ -194,7 +233,7 @@ $(function () {
 
     function selectionScroll() {
         var el = '.selection-fix';
-        if ( $('.wrapper__inner').find(el).length ){
+        if ($('.wrapper__inner').find(el).length) {
             if ($(window).width() > 768) {
                 var vg = $('.selection-section').offset().top + 20;
                 var ng = vg + $('.selection-section').outerHeight() - $(el).outerHeight() - 100;

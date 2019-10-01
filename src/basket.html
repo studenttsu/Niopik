@@ -94,22 +94,21 @@
 
                     <div class="row">
                         <div class="col-md-4 offset-md-4">
-                            <form class="contact-form contact-form--center" style="max-width: 370px" action="">
-                                <select data-placeholder="Город доставки" class="city-select">
-                                    <option></option>
+                            <form id="basket-order" class="contact-form contact-form--center" style="max-width: 370px" action="">
+                                <select name="city" required data-placeholder="Город доставки" class="city-select chosen-select">
+                                    <option value=""></option>
                                     <option value="Томск">Томск</option>
                                     <option value="Москва">Москва</option>
                                 </select>
 
-                                <!-- <input type="text" placeholder="Город доставки"> -->
-                                <input type="text" placeholder="Ваше имя">
-                                <input type="text" placeholder="Ваш телефон">
+                                <input class="form-control" name="name" type="text" placeholder="Иван" label="Ваше имя">
+                                <input class="form-control phone-input" pattern="[0-9]*" data-focused-always="true" value="+7 (" name="phone" type="text" placeholder="+7 (921) 123-45-67" label="Ваш телефон">
 
                                 <button class="btn" type="submit">Отправить заказ</button>
 
                                 <div class="contact-form__policy">
                                     <label class="checkbox">
-                                        <input type="checkbox" checked>
+                                        <input name="policy" type="checkbox" checked>
                                         <span>Я принимаю условия
                                             <a href="#" target="_blank">политики обработки персональных данных</a>
                                         </span>

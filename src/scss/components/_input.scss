@@ -1,3 +1,10 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 input[type=text],
 input[type=email],
 input[type=seach],
@@ -13,14 +20,57 @@ input[type=number] {
     box-sizing: border-box;
     outline: 0;
     font-size: 14px;
-    transition: .12s;
+    transition: .12s box-shadow, .12s border-color;
 
     &::placeholder {
         color: #333;
     }
 
-    &:focus {
+    &:not(.error):focus {
         border-color: $blue !important;
         box-shadow: 0 0 0 1px $blue;
+    }
+
+    &.error {
+        border-color: #dd5656 !important;
+    }
+}
+
+.floating-input {
+    position: relative;
+    display: inline-block;
+    cursor: text;
+
+    &.focus {
+        .floating-input {
+            &__label {
+                transform: translate(0, -10px);
+                font-size: 12px;
+                opacity: 0.8;
+            }
+
+            &__input {
+                padding-bottom: 0px;
+
+                &::placeholder {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        background: #fff;
+        position: absolute;
+        top: 15px;
+        left: 1px;
+        right: 1px;
+        padding: 0 19px;
+        white-space: nowrap;
+        z-index: 1;
+        line-height: 1;
+        font-size: 14px;
+        transition: transform .25s ease,font-size .25s ease,-webkit-transform .25s ease;
     }
 }

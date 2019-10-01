@@ -20,6 +20,7 @@ $(function () {
     
     $('.city-select').autocomplete({
         lookup: cities,
+        minChars: 0,
         showNoSuggestionNotice: true,
         noSuggestionNotice: 'Город не найден, проверьте название'
     });

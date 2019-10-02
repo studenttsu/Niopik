@@ -1,6 +1,8 @@
 $(function () {
 
     var cities = ['Томск', 'Москва'].map(x => ({ value: x, data: x }));
+    var industries = ['Медицина', 'Промышленность'];
+    var industry_types = ['Стоматологическая клиника', 'Офтальмологическая клиника'];
 
     jQuery.validator.addMethod("phoneValidator", function (value, element) {
         return value.length > 0 ? /\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}/g.test(value) : true;
@@ -25,14 +27,17 @@ $(function () {
         noSuggestionNotice: 'Город не найден, проверьте название'
     });
 
-    $('.industry-select').chosen({
-        placeholder_text_single: "Выберите отрасль",
+    $('.industry-select').autocomplete({
+        lookup: industries,
+        minChars: 0,
+        showNoSuggestionNotice: true,
+        noSuggestionNotice: 'Отрасль не найдена, проверьте название'
     });
-    $('.industry-type-select').chosen({
-        placeholder_text_single: "Выберите тип",
-    });
-    $('.area-select').chosen({
-        placeholder_text_single: "Укажите площадь",
+    $('.industry-type-select').autocomplete({
+        lookup: industry_types,
+        minChars: 0,
+        showNoSuggestionNotice: true,
+        noSuggestionNotice: 'Тип не найден, проверьте название'
     });
 
     $('form.contact-form:not(#basket-order)').each(function () {

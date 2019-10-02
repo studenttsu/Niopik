@@ -798,6 +798,8 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        align-content: center;
+        min-height: 266px;
     }
 
     &__text {
@@ -1882,6 +1884,10 @@
             width: 100%;
             max-width: 270px;
         }
+
+        input, label {
+            width: 100%;
+        }
     }
 }
 
@@ -2296,6 +2302,10 @@
 }
 
 .contacts {
+    &-section {
+        padding-top: 0;
+    }
+
     &-title {
         text-align: left;
     }

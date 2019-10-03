@@ -49,57 +49,36 @@
         color: attr(data-color);
     }
 
-    &__prev,
-    &__next {
+    .slick-prev,
+    .slick-next {
         width: 50px;
         height: 50px;
-        background-color: rgba(#fff, 0.24);
         border-radius: 50%;
         position: absolute;
         outline: 0;
         border: none;
         cursor: pointer;
-        top: 50%;
         color: currentColor;
-        transform: translateY(calc(-50% - 25px));
         transition: background-color $easing-time;
 
         &:hover {
-            background-color: rgba(#fff, 0.35);
-        }
-
-        &:active {
-            background-color: rgba(#fff, 0.4);
+            background-color: transparent;
+            opacity: .7;
         }
 
         &:before {
-            content: "";
-            width: 8px;
-            height: 14px;
-            background-repeat: no-repeat;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-top: -7px;
-        }
-
-        svg {
-            width: 24px;
-            height: 24px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            fill: currentColor;
+            display: none;
         }
     }
 
-    &__prev {
+    .slick-prev {
         left: 30px;
+        background: url('../img/icons/vlevo.png') no-repeat center;
     }
 
-    &__next {
+    .slick-next {
         right: 30px;
+        background: url('../img/icons/vpravo.png') no-repeat center;
     }
 }
 

@@ -146,24 +146,7 @@ $(function () {
         selector: '.docs-slider .slick-slide:not(.slick-cloned) .doc-img'
     });
 
-    $('.hero-slider section').on('init', (event, slick) => {
-        console.log(slick)
-        const color = $(slick.$slides[0]).find('a.hero-slide').css('background-color');
-        $('.hero-slider').css('color', color);
-    });
-
-    $('.hero-slider section').on('beforeChange', (event, slick, currentSlide) => {
-        const nextSlideIndex = currentSlide + 1 > slick.$slides.length - 1 ? 0 : currentSlide + 1;
-        const color = $(slick.$slides[nextSlideIndex]).find('a.hero-slide').css('background-color');
-        $('.hero-slider').css('color', color);
-    });
-
-    $('.hero-slider section').slick({
-        dots: true,
-        prevArrow: $('.hero-slider__prev'),
-        nextArrow: $('.hero-slider__next')
-    });
-
+    $('.hero-slider').slick({ dots: true });
 
     $('.docs-slider').slick({
         slidesToShow: 3,

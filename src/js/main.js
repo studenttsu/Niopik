@@ -10,6 +10,26 @@ $(function () {
         return cities.findIndex(x => x.value.toLocaleLowerCase() === value.toLocaleLowerCase()) !== -1;
     });
 
+    $('.goods-card__basket-control .btn').on('click', function () {
+        const btn = $(this);
+        const controlWrap = btn.closest('.goods-card__basket-control');
+        const control = $('<input type="number" pattern="[0-9]*" value="1" min="0" />');
+        
+        controlWrap.append(control);
+        $('input[type=number]').styler();
+
+        btn.hide();
+
+        control.on('change', event => {
+            var value = event.target.value;
+
+            if (value == 0) {
+                control.closest('.jq-number').remove();
+                btn.show();
+            }
+        });
+    })
+
     $('input.form-control').floatingLabel();
 
     $('input.phone-input').inputmask({
@@ -17,7 +37,7 @@ $(function () {
     });
 
     $('input[type=number]').styler();
-    
+
     $('.city-select').autocomplete({
         lookup: cities,
         minChars: 0,

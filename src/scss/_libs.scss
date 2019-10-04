@@ -192,12 +192,15 @@
     padding: 0 27px;
     background: #fff;
     border-radius: 3px;
+    width: 89px;
+    max-width: 89px;
+    border: 1px solid #e5ecfe;
 
     & &__field {
         border: none !important;
         width: 35px;
         box-shadow: none;
-
+        
         input {
             height: 27px;
             line-height: 27px;

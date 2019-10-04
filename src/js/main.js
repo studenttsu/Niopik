@@ -1,6 +1,6 @@
 $(function () {
 
-    var cities = ['Томск', 'Москва'].map(x => ({ value: x, data: x }));
+    var cities = ['Томск', 'Москва'];
     var industries = ['Медицина', 'Промышленность'];
     var industry_types = ['Стоматологическая клиника', 'Офтальмологическая клиника'];
 
@@ -9,7 +9,7 @@ $(function () {
     });
 
     jQuery.validator.addMethod("cityValidator", function (value, element) {
-        return cities.findIndex(x => x.value.toLocaleLowerCase() === value.toLocaleLowerCase()) !== -1;
+        return cities.findIndex(x => x.toLocaleLowerCase() === value.toLocaleLowerCase()) !== -1;
     });
 
     $('input.form-control').floatingLabel();
@@ -19,25 +19,34 @@ $(function () {
     });
 
     $('input[type=number]').styler();
-    
+
     $('.city-select').autocomplete({
         lookup: cities,
         minChars: 0,
         showNoSuggestionNotice: true,
-        noSuggestionNotice: 'Город не найден, проверьте название'
+        noSuggestionNotice: 'Город не найден, проверьте название',
+        onSelect: function () {
+            $(this).parent('.floating-input').addClass('focus');
+        }
     });
 
     $('.industry-select').autocomplete({
         lookup: industries,
         minChars: 0,
         showNoSuggestionNotice: true,
-        noSuggestionNotice: 'Отрасль не найдена, проверьте название'
+        noSuggestionNotice: 'Отрасль не найдена, проверьте название',
+        onSelect: function () {
+            $(this).parent('.floating-input').addClass('focus');
+        }
     });
     $('.industry-type-select').autocomplete({
         lookup: industry_types,
         minChars: 0,
         showNoSuggestionNotice: true,
-        noSuggestionNotice: 'Тип не найден, проверьте название'
+        noSuggestionNotice: 'Тип не найден, проверьте название',
+        onSelect: function () {
+            $(this).parent('.floating-input').addClass('focus');
+        }
     });
 
     $('form.contact-form:not(#basket-order)').each(function () {

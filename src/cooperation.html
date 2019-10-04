@@ -15,9 +15,7 @@
                         <li>
                             <a href="#">Главная</a>
                         </li>
-                        <li>
-                            <a href="#">Сотрудничество</a>
-                        </li>
+                        <li>Сотрудничество</li>
                     </ul>
                 </div>
             </section>
@@ -105,21 +103,17 @@
                                 </label>
                             </li>
                         </ul>
-                        <select data-placeholder="Город доставки" class="city-select">
-                            <option></option>
-                            <option value="Томск">Томск</option>
-                            <option value="Москва">Москва</option>
-                        </select>
-                        <input type="text" placeholder="Ваше имя">
-                        <input type="text" placeholder="Ваше email">
-                        <input type="text" placeholder="Ваш телефон">
+                        <input class="form-control city-select" name="city" type="text" label="Город доставки">
+                        <input class="form-control" name="name" type="text" placeholder="Иван" label="Ваше имя">
+                        <input class="form-control" name="email" type="email" placeholder="mail@mail.ru" label="Ваш email">
+                        <input class="form-control phone-input" pattern="+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" data-focused-always="true" value="+7 (" name="phone" type="tel" placeholder="+7 (921) 123-45-67" label="Ваш телефон">
 
                         <button class="btn" type="submit">Отправить заказ</button>
 
                         <div class="contact-form__policy">
                             <label class="checkbox">
                                 <input type="checkbox" checked>
-                                <span>Я принимаю условия политики обработки персональных данных</span>
+                                <span>Я принимаю условия <a href="#" target="_blank">политики обработки персональных данных</a></span>
                             </label>
                         </div>
                     </form>

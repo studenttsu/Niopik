@@ -1,13 +1,15 @@
 $(function () {
 
-    var cities = ['Томск', 'Москва'].map(x => ({ value: x, data: x }));
+    var cities = ['Томск', 'Москва'];
+    var industries = ['Медицина', 'Промышленность'];
+    var industry_types = ['Стоматологическая клиника', 'Офтальмологическая клиника'];
 
     jQuery.validator.addMethod("phoneValidator", function (value, element) {
         return value.length > 0 ? /\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}/g.test(value) : true;
     });
 
     jQuery.validator.addMethod("cityValidator", function (value, element) {
-        return cities.findIndex(x => x.value.toLocaleLowerCase() === value.toLocaleLowerCase()) !== -1;
+        return cities.findIndex(x => x.toLocaleLowerCase() === value.toLocaleLowerCase()) !== -1;
     });
 
     $('.goods-card__basket-control .btn').on('click', function () {
@@ -42,17 +44,29 @@ $(function () {
         lookup: cities,
         minChars: 0,
         showNoSuggestionNotice: true,
-        noSuggestionNotice: 'Город не найден, проверьте название'
+        noSuggestionNotice: 'Город не найден, проверьте название',
+        onSelect: function () {
+            $(this).parent('.floating-input').addClass('focus');
+        }
     });
 
-    $('.industry-select').chosen({
-        placeholder_text_single: "Выберите отрасль",
+    $('.industry-select').autocomplete({
+        lookup: industries,
+        minChars: 0,
+        showNoSuggestionNotice: true,
+        noSuggestionNotice: 'Отрасль не найдена, проверьте название',
+        onSelect: function () {
+            $(this).parent('.floating-input').addClass('focus');
+        }
     });
-    $('.industry-type-select').chosen({
-        placeholder_text_single: "Выберите тип",
-    });
-    $('.area-select').chosen({
-        placeholder_text_single: "Укажите площадь",
+    $('.industry-type-select').autocomplete({
+        lookup: industry_types,
+        minChars: 0,
+        showNoSuggestionNotice: true,
+        noSuggestionNotice: 'Тип не найден, проверьте название',
+        onSelect: function () {
+            $(this).parent('.floating-input').addClass('focus');
+        }
     });
 
     $('form.contact-form:not(#basket-order)').each(function () {

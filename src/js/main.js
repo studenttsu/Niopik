@@ -16,7 +16,7 @@ $(function () {
         const btn = $(this);
         const controlWrap = btn.closest('.goods-card__basket-control');
         const control = $('<input type="number" pattern="[0-9]*" value="1" min="0" />');
-        
+
         controlWrap.append(control);
         $('input[type=number]').styler();
 
@@ -30,7 +30,16 @@ $(function () {
                 btn.show();
             }
         });
-    })
+    });
+
+    $('.goods-card .select__dropdown li').on('click', function () {
+        const basketControl = $(this).closest('.goods-card').find('.goods-card__basket-control');
+
+        if (basketControl.find('.btn').css('display') == 'none') {
+            basketControl.find('.jq-number').remove();
+            basketControl.find('.btn').show();
+        }
+    });
 
     $('input.form-control').floatingLabel();
 

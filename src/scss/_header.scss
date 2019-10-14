@@ -12,6 +12,18 @@
     }    
 }
 
+.header.scroll {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    .header__navbar {
+        display: none;
+    }
+}
+
 .navbar {
     display: flex;
     align-items: center;

@@ -1,12 +1,13 @@
 .select {
     position: relative;
+    display: inline-block;
 
     &__current {
         line-height: 1;
         display: block;
         background: #ebebeb;
         border-radius: 3px;
-        padding: 6px 15px;
+        padding: 6px 35px 6px 15px;
         transition: .15s;
         cursor: pointer;
         position: relative;
@@ -39,10 +40,10 @@
         padding: 0;
         display: none;
         position: absolute;
-        width: 100%;
-        border-bottom-right-radius: 3px;
-        border-bottom-left-radius: 3px;
+        border-radius: 3px;
         z-index: 9999;
+        min-width: 100%;
+        overflow: hidden;
 
         li {
             padding: 6px 15px;
@@ -50,6 +51,7 @@
             cursor: pointer;
             line-height: 1;
             transition: .15s;
+            white-space: nowrap;
 
             &:hover {
                 background-color: darken(#ebebeb, 3%);
@@ -60,9 +62,6 @@
     &.opened {
         .select {
             &__current {
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
-
                 &:after {
                     transform: rotate(270deg);
                 }

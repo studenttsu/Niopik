@@ -213,9 +213,7 @@
         }
 
         &__tare {
-            .select {
-                margin: auto;
-            }
+            text-align: center;
         }
 
         &__footer {
@@ -223,6 +221,7 @@
 
             > div {
                 margin: 0 0 20px;
+                padding: 0 !important;
                 text-align: center;
             }
         }

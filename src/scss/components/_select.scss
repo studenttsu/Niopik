@@ -1,6 +1,7 @@
 .select {
     position: relative;
     display: inline-block;
+    text-align: left;
 
     &__current {
         line-height: 1;
@@ -41,9 +42,10 @@
         display: none;
         position: absolute;
         border-radius: 3px;
-        z-index: 9999;
+        z-index: 99;
         min-width: 100%;
         overflow: hidden;
+        text-align: left;
 
         li {
             padding: 6px 15px;

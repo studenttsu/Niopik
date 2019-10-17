@@ -365,4 +365,10 @@ $(function () {
         headerScroll();
     });
 
+    $(document).on('click','.scroll-btn',function(){
+        var el = $(this).attr('href');
+        $('body,html').animate({scrollTop: $(el).offset().top},800);
+        return false;
+    });
+
 });

@@ -268,7 +268,7 @@ $(function () {
     function newsScroll(el) {
         if ($('.wrapper__inner').find(el).length) {
             if ($(window).width() > 768) {
-                var vg = $('.news__wrapper').offset().top - 30;
+                var vg = $('.news__wrapper').offset().top - 120;
                 var ng = vg + $('.news__wrapper').outerHeight() - $(el).outerHeight();
                 var st = $(window).scrollTop();
 
@@ -300,7 +300,7 @@ $(function () {
         var el = '.selection-fix';
         if ($('.wrapper__inner').find(el).length) {
             if ($(window).width() > 768) {
-                var vg = $('.selection-section').offset().top + 20;
+                var vg = $('.selection-section').offset().top - 70;
                 var ng = vg + $('.selection-section').outerHeight() - $(el).outerHeight() - 100;
                 var st = $(window).scrollTop();
 

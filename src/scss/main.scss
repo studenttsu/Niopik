@@ -195,6 +195,7 @@
 
         img {
             max-width: 100%;
+            max-height: 200px;
             display: inline-block;
             margin: auto;
         }
@@ -1347,7 +1348,7 @@
         &.scroll {
             position: fixed;
             right: calc(50% - 600px);
-            top: 30px;
+            top: 110px;
         }
 
         &.bottom {
@@ -1366,6 +1367,7 @@
                 img {
                     display: block;
                     max-width: 100%;
+                    max-height: 200px;
                     margin: 0 auto 5px;
                 }
 
@@ -1981,7 +1983,7 @@
 
     &.scroll {
         position: fixed;
-        top: 30px;
+        top: 120px;
     }
 
     &.bottom {

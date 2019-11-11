@@ -367,7 +367,7 @@ $(function () {
 
     $(document).on('click','.scroll-btn',function(){
         var el = $(this).attr('href');
-        $('body,html').animate({scrollTop: $(el).offset().top},800);
+        $('body,html').animate({scrollTop: $(el).offset().top - $('.header').find('.main-top').outerHeight()},800);
         return false;
     });
 

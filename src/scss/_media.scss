@@ -449,9 +449,9 @@
         }
     }
 
-    .about-section__txt {
+    /*.about-section__txt {
         text-align: center;
-    }
+    }*/
 
     .about {
         h1 {
@@ -501,6 +501,7 @@
             margin: auto;
             width: 100%;
             max-width: 380px;
+            margin-bottom: 20px;
         }
 
         &__title {
@@ -1093,6 +1094,20 @@
                 flex: 50%;
                 margin-top: 20px;
             }
+
+            .product-price {
+                font-size: 12px;
+            }
+            dl dt {
+                font-size: 12px;
+            }
+            dl dd {
+                font-size: 14px;
+            }
+        }
+
+        &__sum {
+            align-items: center;
         }
     }
 
@@ -1208,7 +1223,7 @@
             margin: 0 auto 15px;
         }
 
-        form {
+        &-form-small {
             margin: 0 auto;
         }
 

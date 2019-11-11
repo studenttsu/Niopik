@@ -353,9 +353,22 @@
             }
         }
 
+        ul {
+            overflow: hidden;
+            max-height: 0;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
         &.active {
             > a {
                 font-weight: 600;
+            }
+
+            ul {
+                max-height: 700px;
             }
             
             .mobile-menu__arrow-btn {

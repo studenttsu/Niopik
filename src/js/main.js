@@ -371,4 +371,11 @@ $(function () {
         return false;
     });
 
+    $(document).on('click','select',function(){
+        $(this).parents('.select-wrap').toggleClass('open');
+    });
+    $('select').on('blur',function(){
+        $(this).parents('.select-wrap').removeClass('open');
+    });
+
 });

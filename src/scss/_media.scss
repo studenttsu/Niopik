@@ -271,7 +271,7 @@
 
     .goods-service {
         > .row {
-            width: initial;
+            width: calc(100% + 30px);
         }
 
         &__descr {
@@ -316,6 +316,13 @@
                 margin: auto;
             }
         }
+
+        &__img {
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
     }
 
     .product-review p {
@@ -356,7 +363,7 @@
     }
 
     body {
-        padding-top: 88px;
+        padding-top: 88px !important;
     }
 
     .main-top {
@@ -570,6 +577,8 @@
 
         .feature-item {
             flex: initial;
+            width: 100%;
+            max-width: 360px;
 
             &__icon {
                 width: 65px;
@@ -1088,7 +1097,7 @@
     }
 
     body {
-        padding-top: 70px;
+        padding-top: 70px !important;
     }
 
     .goods-section {

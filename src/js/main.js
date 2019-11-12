@@ -175,7 +175,12 @@ $(function () {
         selector: '.docs-slider .slick-slide:not(.slick-cloned) .doc-img'
     });
 
-    $('.hero-slider').slick({ dots: true });
+    $('.hero-slider').slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true
+    });
 
     $('.docs-slider').slick({
         slidesToShow: 3,

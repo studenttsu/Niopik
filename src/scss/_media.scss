@@ -1021,6 +1021,7 @@
 
     .about-section {
         padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .table {
@@ -1089,25 +1090,34 @@
     .basket-list {
         &__item {
             margin-top: -20px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            felx-wrap: wrap;
 
             > div {
                 flex: 50%;
                 margin-top: 20px;
             }
 
-            .product-price {
-                font-size: 12px;
-            }
-            dl dt {
-                font-size: 12px;
-            }
-            dl dd {
-                font-size: 14px;
+            td {
+                display: block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 50%;
+
+                &:first-child, &:nth-child(2) {
+                    width: 100%;
+                    border: 0;
+                }
             }
         }
 
         &__sum {
             align-items: center;
+            height: 100%;
         }
     }
 

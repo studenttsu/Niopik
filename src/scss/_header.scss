@@ -44,8 +44,8 @@
 }
 
 .hamb {
-    width: 18px;
-    height: 12px;
+    width: 30px;
+    height: 30px;
     box-sizing: border-box;
     display: block;
     background: transparent;
@@ -62,6 +62,7 @@
         border-radius: 10px;
         background-color: #fff;
         box-sizing: border-box;
+        margin: 0 auto;
 
         &:not(:first-child) {
             margin-top: 3px;

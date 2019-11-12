@@ -1079,13 +1079,6 @@
             font-size: 12px;
         }
     }
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
-    .main-top {
-        height: 70px;
-    }
 
     .basket-list {
         &__item {
@@ -1119,6 +1112,13 @@
             align-items: center;
             height: 100%;
         }
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    .main-top {
+        height: 70px;
     }
 
     body {

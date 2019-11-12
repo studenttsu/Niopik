@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Ниопик</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@2.0.2/dist/jquery.formstyler.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@2.0.2/dist/jquery.formstyler.theme.min.css">
+    <link rel="stylesheet" href="css/main.css?v=4fcd39d76b17d7cc1cfcf6557b5c25af">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__navbar">
+                <div class="container">
+                    <nav class="navbar">
+                        <a href="#">Главная</a>
+                        <a href="#">Подбор дезсредства</a>
+                        <a href="#">Выбор антисептика</a>
+                        <a href="#">Расход антисептика</a>
+                        <a href="#">О компании</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Отзывы</a>
+                        <a href="#">Сотрудничество</a>
+                        <a href="#">Доставка</a>
+                        <a href="#">Информация о продукции</a>
+                        <a href="#">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+        
+            <div class="main-top">
+                <div class="container">
+                    <button id="mobile-hamb" class="hamb main-top__hamb">
+                        <span class="hamb__item"></span>
+                        <span class="hamb__item"></span>
+                        <span class="hamb__item"></span>
+                    </button>
+        
+                    <div class="main-top__left">
+                        <div class="main-top__logo">
+                            <a href="/" class="logo">
+                                <img src="img/logo.png" alt="Ниопик">
+                                <span>Интернет-магазин продукции производителя "Ниопик"</span>
+                            </a>
+                        </div>
+        
+                        <button id="catalog-btn" class="btn catalog-btn" type="button">
+                            <div class="catalog-btn__hamb hamb">
+                                <span class="hamb__item"></span>
+                                <span class="hamb__item"></span>
+                                <span class="hamb__item"></span>
+                            </div>
+        
+                            <span>Продукция</span>
+                        </button>
+                    </div>
+        
+                    <div class="main-top__right">
+                        <div class="phone">
+                            <a href="tel:88002345399">8 (800) 234 53 99</a>
+                            <span class="phone__descr">Звонок по России бесплатный</span>
+                        </div>
+        
+                        <button class="order-phone" data-fancybox data-src="#order-phone-modal">Заказать звонок</button>
+        
+                        <button class="basket-btn">
+                            <span class="basket-btn__label">Корзина</span>
+                            <div class="basket-btn__count"><span>0</span></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <section class="categories">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 offset-md-1 categories__list">
+                            <div class="categories-list">
+                                <li data-id="category1">
+                                    <a href="#">Дезинфицирующие средства</a>
+                                </li>
+                                <li data-id="category2">
+                                    <a href="#">Строительные антисептики</a>
+                                </li>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-8 categories__items">
+                            <ul class="category-items" data-target="category1">
+                                <li>
+                                    <a href="#">АДС-521</a>
+                                </li>
+                                <li>
+                                    <a href="#">Акваминол</a>
+                                </li>
+                                <li>
+                                    <a href="#">Акваминол Форте</a>
+                                </li>
+                                <li>
+                                    <a href="#">Акваминол Спрей</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аламинол</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аламинол Плюс</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ветосепт</a>
+                                </li>
+                                <li>
+                                    <a href="#">Альпинол</a>
+                                </li>
+                                <li>
+                                    <a href="#">Бианол</a>
+                                </li>
+                                <li>
+                                    <a href="#">Макси-Дез</a>
+                                </li>
+                                <li>
+                                    <a href="#">Макси-Дез М</a>
+                                </li>
+                                <li>
+                                    <a href="#">Макси-Септ Аква</a>
+                                </li>
+                                <li>
+                                    <a href="#">Макси-Септ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Макси-Стерил</a>
+                                </li>
+                            </ul>
+        
+                            <ul class="category-items" data-target="category2">
+                                <li>
+                                    <a href="#">Каменный доктор «Картоцид-компаунд Б1»</a>
+                                </li>
+                                <li>
+                                    <a href="#">Древесный доктор «Картоцид-компаунд В1»</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <div class="wrapper__inner">
+            <section class="breadcrumbs-wrap">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>Применение</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="application application-section">
+                <div class="container">
+                    <div class="banner" style="background-image: url('img/banner-pattern-7.png'); background-color: #ddb17e;">
+                        <div class="banner__inner">
+                            <div class="banner__text text-pink">Универсальные строительные<br> антисептики <nobr>"Картоцид-компаунд"</nobr></div>
+
+                            <div class="banner__img">
+                                <img src="img/balloons-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--blue">
+                <div class="container">
+
+                    <div class="section__title">
+                        <h2>Области применения</h2>
+                    </div>
+
+                    <div class="row goods-section-wrap">
+                        <div class="col-lg-6">
+                            <a class="goods-section">
+                                <div class="goods-section__img">
+                                    <img src="img/pictures/icon1.png" alt="">
+                                </div>
+                                <span class="goods-section__name">Строительным организациям</span>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <a class="goods-section">
+                                <div class="goods-section__img">
+                                    <img src="img/pictures/icon2.png" alt="">
+                                </div>
+                                <span class="goods-section__name">Лесозаготовительным и древообрабатывающим организациям
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <a class="goods-section">
+                                <div class="goods-section__img">
+                                    <img src="img/pictures/icon3.png" alt="">
+                                </div>
+                                <span class="goods-section__name">Ремонт, реконструкция, реставрация</span>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <a class="goods-section">
+                                <div class="goods-section__img">
+                                    <img src="img/pictures/icon5.png" alt="">
+                                </div>
+                                <span class="goods-section__name">Деревянные и каменные загородные дома </span>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <a class="goods-section">
+                                <div class="goods-section__img">
+                                    <img src="img/pictures/icon4.png" alt="">
+                                </div>
+                                <span class="goods-section__name">Ремонт в квартире </span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-12">
+                            <div class="footer__nav">
+                                <nav class="footer-nav">
+                                    <header class="footer-nav__title">Каталог</header>
+            
+                                    <ul class="footer-nav__list">
+                                        <li>
+                                            <a href="#">Дезинфицирующие средства</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Строительные антисептики</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+            
+                                <nav class="footer-nav">
+                                    <header class="footer-nav__title">Помощь в выборе антисептика</header>
+            
+                                    <ul class="footer-nav__list">
+                                        <li>
+                                            <a href="#">Подбор дезсредства</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Выбор антисептика</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Расход антисептика</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Информация о продукции</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+            
+                                <nav class="footer-nav footer-nav--others">
+                                    <footer class="footer-nav__title">Другие страницы</footer>
+            
+                                    <ul class="footer-nav__list">
+                                        <li>
+                                            <a href="#">О компании</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новости</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Отзывы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сотрудничество</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Доставка</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+            
+                            <div class="footer-privacy">
+                                <div class="footer-privacy__item">
+                                    На сайте dezniopik.ru используются файлы “cookie” , которые содержат в себе информацию о предыдущих посещениях веб-сайта.
+                                    Если вы не хотите использовать файлы “cookie” – измените настройки браузера.
+                                </div>
+            
+                                <div class="footer-privacy__item">
+                                    Цены, указанные на сайте, не являются публичной офертой, носят исключительно справочную информацию и могут измениться в любой
+                                    момент.
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-12 footer__partners">
+                            <div class="footer-partner">
+                                <span>отдел продаж
+                                    <br> и развития интернет-магазина</span>
+                                <a href="#">
+                                    <img src="img/novohim.jpg" alt="">
+                                </a>
+                            </div>
+            
+                            <div class="footer-partner">
+                                <span>создан
+                                    <br> и поддерживается</span>
+                                <a href="#">
+                                    <img src="img/proriv.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="footer-contacts footer__contacts">
+                    <div class="container">
+                        <div>
+                            Есть вопросы? Задайте их нашему менеджер по телефону:
+                            <a href="tel:8 (800) 234 53 99">
+                                <strong>8 (800) 234 53 99</strong>
+                            </a>. Звонок по России
+                            <strong>бесплатный</strong>
+                        </div>
+            
+                        <div>
+                            <strong>Пишите нам на почту</strong>: niopik@novochem.ru
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="footer-info">
+                    <div class="container">
+                        <div class="footer-info__about">
+                            <div class="footer-info__company">
+                                ООО «ТД «Новохим» (c) 2016-2019. Все права защищены
+                                <br> ИНН 7017384559
+                                <br> ОГРН 1157017015891
+                            </div>
+            
+                            <div class="policy-links">
+                                <a href="#">Политика конфиденциальности</a>
+                                <a href="#">Политика обработки персональных данных</a>
+                            </div>
+                        </div>
+            
+                        <div class="social-icons">
+                            <a href="#" class="social-icons__link social-icons__link--vk" target="_blank" rel="noopener">
+                                <svg class="svg-icon">
+                                    <svg viewBox="0 0 31 28" id="i-vk">
+                                        <path d="M29.953 8.125c.234.641-.5 2.141-2.344 4.594-3.031 4.031-3.359 3.656-.859 5.984 2.406 2.234 2.906 3.313 2.984 3.453 0 0 1 1.75-1.109 1.766l-4 .063c-.859.172-2-.609-2-.609-1.5-1.031-2.906-3.703-4-3.359 0 0-1.125.359-1.094 2.766.016.516-.234.797-.234.797s-.281.297-.828.344h-1.797c-3.953.25-7.438-3.391-7.438-3.391S3.421 16.595.078 8.736c-.219-.516.016-.766.016-.766s.234-.297.891-.297l4.281-.031c.406.063.688.281.688.281s.25.172.375.5c.703 1.75 1.609 3.344 1.609 3.344 1.563 3.219 2.625 3.766 3.234 3.437 0 0 .797-.484.625-4.375-.063-1.406-.453-2.047-.453-2.047-.359-.484-1.031-.625-1.328-.672-.234-.031.156-.594.672-.844.766-.375 2.125-.391 3.734-.375 1.266.016 1.625.094 2.109.203 1.484.359.984 1.734.984 5.047 0 1.062-.203 2.547.562 3.031.328.219 1.141.031 3.141-3.375 0 0 .938-1.625 1.672-3.516.125-.344.391-.484.391-.484s.25-.141.594-.094l4.5-.031c1.359-.172 1.578.453 1.578.453z"></path>
+                                    </svg>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icons__link social-icons__link--ok" target="_blank" rel="noopener">
+                                <svg class="svg-icon">
+                                    <svg viewBox="0 0 20 28" id="i-odnoklassniki">
+                                        <path d="M10 14.172c-3.906 0-7.094-3.172-7.094-7.078C2.906 3.172 6.093 0 10 0s7.094 3.172 7.094 7.094c0 3.906-3.187 7.078-7.094 7.078zm0-10.578a3.49 3.49 0 0 0-3.484 3.5c0 1.922 1.563 3.484 3.484 3.484s3.484-1.563 3.484-3.484c0-1.937-1.563-3.5-3.484-3.5zm8.172 11.437c.688 1.406-.094 2.078-1.875 3.234-1.5.953-3.563 1.328-4.922 1.469l1.141 1.125 4.172 4.172c.625.641.625 1.672 0 2.297l-.187.203a1.66 1.66 0 0 1-2.312 0 956.276 956.276 0 0 0-4.172-4.188l-4.172 4.188c-.641.625-1.672.625-2.297 0l-.187-.203a1.612 1.612 0 0 1 0-2.297c1.062-1.062 2.578-2.594 4.172-4.172l1.125-1.125c-1.344-.141-3.437-.5-4.953-1.469-1.781-1.156-2.562-1.828-1.875-3.234.406-.797 1.516-1.469 2.984-.313 0 0 1.984 1.578 5.187 1.578s5.187-1.578 5.187-1.578c1.469-1.156 2.578-.484 2.984.313z"></path>
+                                    </svg>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icons__link social-icons__link--fb" target="_blank" rel="noopener">
+                                <svg class="svg-icon">
+                                    <svg viewBox="0 0 16 28" id="i-facebook">
+                                        <path d="M14.984.187v4.125h-2.453c-1.922 0-2.281.922-2.281 2.25v2.953h4.578l-.609 4.625H10.25v11.859H5.469V14.14H1.485V9.515h3.984V6.109C5.469 2.156 7.891 0 11.422 0c1.687 0 3.141.125 3.563.187z"></path>
+                                    </svg>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icons__link social-icons__link--instagram" target="_blank" rel="noopener">
+                                <svg class="svg-icon">
+                                    <svg viewBox="0 0 24 28" id="i-instagram">
+                                        <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm2.156 0c0 3.406-2.75 6.156-6.156 6.156S5.844 17.406 5.844 14 8.594 7.844 12 7.844s6.156 2.75 6.156 6.156zm1.688-6.406c0 .797-.641 1.437-1.437 1.437S16.97 8.39 16.97 7.594s.641-1.437 1.437-1.437 1.437.641 1.437 1.437zM12 4.156c-1.75 0-5.5-.141-7.078.484-.547.219-.953.484-1.375.906s-.688.828-.906 1.375c-.625 1.578-.484 5.328-.484 7.078s-.141 5.5.484 7.078c.219.547.484.953.906 1.375s.828.688 1.375.906c1.578.625 5.328.484 7.078.484s5.5.141 7.078-.484c.547-.219.953-.484 1.375-.906s.688-.828.906-1.375c.625-1.578.484-5.328.484-7.078s.141-5.5-.484-7.078c-.219-.547-.484-.953-.906-1.375s-.828-.688-1.375-.906C17.5 4.015 13.75 4.156 12 4.156zM24 14c0 1.656.016 3.297-.078 4.953-.094 1.922-.531 3.625-1.937 5.031s-3.109 1.844-5.031 1.937c-1.656.094-3.297.078-4.953.078s-3.297.016-4.953-.078c-1.922-.094-3.625-.531-5.031-1.937S.173 20.875.08 18.953C-.014 17.297.002 15.656.002 14s-.016-3.297.078-4.953c.094-1.922.531-3.625 1.937-5.031s3.109-1.844 5.031-1.937c1.656-.094 3.297-.078 4.953-.078s3.297-.016 4.953.078c1.922.094 3.625.531 5.031 1.937s1.844 3.109 1.937 5.031C24.016 10.703 24 12.344 24 14z"></path>
+                                    </svg>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <nav class="mobile-menu__nav">
+            <ul>
+                <li class="drop">
+                    <a href="catalog-disinfectant.html">Дезинфицирующие средства</a>
+                    <button class="mobile-menu__arrow-btn" type="button"></button>
+    
+                    <ul class="mobile-menu__sub-nav">
+                        <li>
+                            <a href="#">АДС-521</a>
+                        </li>
+                        <li>
+                            <a href="#">Акваминол</a>
+                        </li>
+                        <li>
+                            <a href="#">Акваминол Форте</a>
+                        </li>
+                        <li>
+                            <a href="#">Акваминол Спрей</a>
+                        </li>
+                        <li>
+                            <a href="#">Аламинол</a>
+                        </li>
+                        <li>
+                            <a href="#">Аламинол Плюс</a>
+                        </li>
+                        <li>
+                            <a href="#">Ветосепт</a>
+                        </li>
+                        <li>
+                            <a href="#">Альпинол</a>
+                        </li>
+                        <li>
+                            <a href="#">Бианол</a>
+                        </li>
+                        <li>
+                            <a href="#">Макси-Дез</a>
+                        </li>
+                        <li>
+                            <a href="#">Макси-Дез М</a>
+                        </li>
+                        <li>
+                            <a href="#">Макси-Септ Аква</a>
+                        </li>
+                        <li>
+                            <a href="#">Макси-Септ</a>
+                        </li>
+                        <li>
+                            <a href="#">Макси-Стерил</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="drop">
+                    <a href="catalog-construction.html">Строительные антисептики</a>
+                    <button class="mobile-menu__arrow-btn" type="button"></button>
+    
+                    <ul class="mobile-menu__sub-nav">
+                        <li>
+                            <a href="#">Каменный доктор «Картоцид-компаунд Б1»</a>
+                        </li>
+                        <li>
+                            <a href="#">Древесный доктор «Картоцид-компаунд В1»</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Подбор дезсредства</a>
+                </li>
+                <li>
+                    <a href="#">Выбор антисептика</a>
+                </li>
+                <li>
+                    <a href="#">Расход антисептика</a>
+                </li>
+                <li>
+                    <a href="#">О компании</a>
+                </li>
+                <li>
+                    <a href="#">Новости</a>
+                </li>
+                <li>
+                    <a href="#">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#">Сотрудничество</a>
+                </li>
+                <li>
+                    <a href="#">Доставка</a>
+                </li>
+                <li>
+                    <a href="#">Информация о продукции</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="text-center">
+            <div class="phone mobile-menu__phone">
+                <a href="tel:88002345399">8 (800) 234 53 99</a>
+                <span class="phone__descr">Звонок по России бесплатный</span>
+            </div>
+    
+            <button class="order-phone" data-fancybox data-src="#order-phone-modal">Заказать звонок</button>
+        </div>
+        
+    </div>
+    
+    <div class="hidden">
+        <div id="order-phone-modal" class="modal">
+            <header class="modal__header">
+                <div class="modal__title">Оставьте заявку на обратный звонок</div>
+                <div class="modal__subtitle">Менеджер перезвонит в ближайшее время</div>
+            </header>
+        
+            <form class="contact-form contact-form--center" style="max-width: 370px" action="">
+                <input class="form-control" name="name" type="text" placeholder="Иван" label="Ваше имя">
+                <input class="form-control phone-input" pattern="+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" data-focused-always="true" value="+7 ("
+                    name="phone" type="tel" placeholder="+7 (921) 123-45-67" label="Ваш телефон" inputmode="numeric">
+        
+                <button class="btn" type="submit">Заказать звонок</button>
+        
+                <div class="contact-form__policy">
+                    <label class="checkbox">
+                        <input name="policy" type="checkbox" checked>
+                        <span>Я принимаю условия
+                            <a href="#" target="_blank">политики обработки персональных данных</a>
+                        </span>
+                    </label>
+                </div>
+            </form>
+        </div>
+        
+        <div id="order-price-modal" class="modal">
+            <header class="modal__header">
+                <div class="modal__title">Оставьте заявку на оптовый <nobr>прайс-лист</nobr></div>
+                <div class="modal__subtitle">Менеджер отправит его на Email</div>
+            </header>
+        
+            <form class="contact-form contact-form--center" style="max-width: 370px" action="">
+                <input class="form-control" name="name" type="text" placeholder="Иван" label="Ваше имя">
+                <input class="form-control" name="email" type="email" placeholder="email@mail.ru" label="Ваш email">
+                <input class="form-control phone-input" pattern="+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" data-focused-always="true" value="+7 ("
+                    name="phone" type="tel" placeholder="+7 (921) 123-45-67" label="Ваш телефон" inputmode="numeric">
+        
+                <button class="btn" type="submit">Заказать звонок</button>
+        
+                <div class="contact-form__policy">
+                    <label class="checkbox">
+                        <input name="policy" type="checkbox" checked>
+                        <span>Я принимаю условия
+                            <a href="#" target="_blank">политики обработки персональных данных</a>
+                        </span>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/scripts.min.js?v=4fcd39d76b17d7cc1cfcf6557b5c25af"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@2.0.2/dist/jquery.formstyler.min.js"></script>
+
+</body>
+
+</html>
